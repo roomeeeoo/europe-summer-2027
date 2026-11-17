@@ -1,0 +1,23 @@
+{
+  "name": "europe-summer-2027",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Web del viaje Europe Summer 2027 a la Riviera albanesa: vuelos, alojamiento, itinerario, mapa y presupuesto.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "images": "node scripts/fetch-images.mjs",
+    "deploy": "npm run build && gh-pages -d dist -b main --dotfiles -r https://github.com/roomeeeoo/europe-summer-2027.git"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.2.6",
+    "gsap": "^3.13.0",
+    "leaflet": "^1.9.4"
+  }
+}

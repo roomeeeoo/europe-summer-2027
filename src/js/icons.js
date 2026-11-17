@@ -1,0 +1,47 @@
+// Iconos SVG propios (trazo 1.8, esquinas redondeadas)
+const s = (d, extra = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extra}>${d}</svg>`;
+
+export const icon = {
+  plane: s('<path d="M10.5 21l1.5-1 1.5 1v-3l-1-1v-4l7 3v-2l-7-5V4a1 1 0 0 0-2 0v5l-7 5v2l7-3v4l-1 1z"/>'),
+  down: s('<path d="M12 5v14M6 13l6 6 6-6"/>'),
+  ext: s('<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>'),
+  pin: s('<path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>'),
+  check: s('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),
+  tilde: s('<path d="M4 13c2.5-3 5-3 8 0s5.5 3 8 0"/>'),
+  plus: s('<path d="M12 5v14M5 12h14"/>'),
+  minus: s('<path d="M5 12h14"/>'),
+  alert: s('<path d="M12 3l9.5 17h-19z"/><path d="M12 10v4M12 17.5v.01"/>'),
+  info: s('<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/>'),
+  sun: s('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'),
+  umbrella: s('<path d="M12 3a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9zM12 12v7a2 2 0 0 0 4 0"/>'),
+  clock: s('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
+  bus: s('<rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 21v-3M16 21v-3"/><circle cx="8" cy="14.5" r=".8" fill="currentColor"/><circle cx="16" cy="14.5" r=".8" fill="currentColor"/>'),
+  boat: s('<path d="M3 15l2 4h14l2-4zM12 3v12M12 4l6 8h-6"/>'),
+  music: s('<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>'),
+  bed: s('<path d="M3 18V7M3 13h18v5M21 13a3 3 0 0 0-3-3h-8v3"/><circle cx="6.5" cy="10.5" r="1.5"/>'),
+  waves: s('<path d="M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 13c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/>'),
+  castle: s('<path d="M4 21V9l2 1V6h2v3h2V6h4v3h2V6h2v4l2-1v12zM10 21v-4a2 2 0 0 1 4 0v4"/>'),
+  food: s('<path d="M4 3v8a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V3M6 13v8M16 21V3c2.5 1 4 3.5 4 7h-4"/>'),
+  euro: s('<path d="M17 6.5A7 7 0 1 0 17 17.5M4 10h9M4 14h9"/>'),
+  map: s('<path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z M9 4v14M15 6v14"/>'),
+  cal: s('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'),
+  menu: s('<path d="M4 8h16M4 16h16"/>'),
+  close: s('<path d="M6 6l12 12M18 6L6 18"/>'),
+  star: s('<path d="M12 3l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.3l6.1-.7z"/>'),
+  moon: s('<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>'),
+  home: s('<path d="M3 11l9-7 9 7M5 10v10h14V10"/>'),
+  doc: s('<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>'),
+  bag: s('<rect x="5" y="7" width="14" height="13" rx="3"/><path d="M9 7V5a3 3 0 0 1 6 0v2M9 12h6"/>'),
+  shield: s('<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>'),
+  piggy: s('<path d="M5 11a7 6 0 0 1 12-3l3-1v4l1 1v3h-2a7 6 0 0 1-3 3v2h-3v-1.5a7 7 0 0 1-2 0V20H8v-2.5A6 6 0 0 1 5 11z"/><circle cx="15" cy="10.5" r=".8" fill="currentColor"/>'),
+  card: s('<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/>'),
+  id: s('<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.6-1.6 1.7-2.4 3-2.4s2.4.8 3 2.4M14 10h4M14 13h3"/>'),
+  sparkle: s('<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>'),
+  eye: s('<path d="M2 12c3.5-6 16.5-6 20 0-3.5 6-16.5 6-20 0z"/><circle cx="12" cy="12" r="3"/>'),
+  left: s('<path d="M15 5l-7 7 7 7"/>'),
+  right: s('<path d="M9 5l7 7-7 7"/>'),
+  people: s('<circle cx="9" cy="8" r="3"/><path d="M3 20c.8-3.5 3.2-5.5 6-5.5s5.2 2 6 5.5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 14.5c2.4.2 4 1.9 4.5 4.5"/>'),
+};
+
+// Marca: el "Ojo Azul" (Syri i Kaltër) — anillos de agua turquesa sobre el rojo albanés
+export const mark = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#E1262D"/><circle cx="32" cy="32" r="20" fill="#0B3954"/><circle cx="32" cy="32" r="14" fill="#12A6B5"/><circle cx="32" cy="32" r="7.5" fill="#7FE3E8"/><circle cx="32" cy="32" r="2.6" fill="#fff"/></svg>`;
