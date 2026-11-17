@@ -1,4 +1,4 @@
-import{A as r,i as d,p,h as i,T as o,b as c,m as v,j as m,c as u}from"./trip-BaQuDotF.js";/* empty css              */const n=["#12A6B5","#FFC845","#06324F","#5FC7C9","#E07A1F","#C9922E","#E1262D","#8FAEC0","#4B5D73","#B8C7D1"],t=r.rows.map(s=>[s[0],s[2]]),h=t.reduce((s,[,a])=>s+a,0),e=s=>u(s),b=`
+import{A as r,i as d,p,h as i,T as o,b as c,m as v,j as m,c as u}from"./trip-Dz351KtT.js";/* empty css              */const n=["#12A6B5","#FFC845","#06324F","#5FC7C9","#E07A1F","#C9922E","#E1262D","#8FAEC0","#4B5D73","#B8C7D1"],t=r.rows.map(s=>[s[0],s[2]]),h=t.reduce((s,[,a])=>s+a,0),e=s=>u(s),b=`
 ${p("ksamil4","Página 7 · Presupuesto","Lo que cuesta","Todos los gastos del viaje, por persona y para el grupo de 7. Sin calculadoras: los números ya están hechos.")}
 <nav class="chips-nav" aria-label="Secciones"><div class="wrap"><a href="#resumen">Resumen</a><a href="#desglose">Desglose</a><a href="#escenarios">Escenarios</a><a href="#pagos">Cuándo se paga</a><a href="#ahorro">Ahorrar más</a></div></nav>
 
@@ -55,9 +55,9 @@ ${p("ksamil4","Página 7 · Presupuesto","Lo que cuesta","Todos los gastos del v
 </div></section>
 
 <section class="sec" id="ahorro"><div class="wrap">
-  ${i("Ahorrar más","Cómo bajar de 850 €.","")}
+  ${i("Ahorrar más","Cómo bajar de 900 €.","")}
   <div class="grid-2">
-    <div class="tip rv"><h3>${d.piggy}Trucos</h3><ul><li>Volver el lunes por Bolonia (una noche menos en Sarandë): −55 €</li><li>Comprar los vuelos ya, en grupos de 2–3: −40 €</li><li>Villa Luiza en Sarandë en vez de Sol Levante: −37 €</li><li>Barco compartido (18–40 €) en vez de privado: −15 €</li><li>Una noche de fiesta menos: −25 €</li><li><b>Resultado: ≈ 815 €</b></li></ul></div>
+    <div class="tip rv"><h3>${d.piggy}Trucos</h3><ul><li>Comprar los vuelos ya, en grupos de 2–3: −40 €</li><li>Villa Luiza en Sarandë en vez de Sol Levante: −37 €</li><li>Barco compartido (18–40 €) en vez de privado: −15 €</li><li>Una noche de fiesta menos: −25 €</li><li><b>Resultado: ≈ 870 €</b></li></ul></div>
     <div class="tip rv"><h3>${d.alert}Ojo</h3><ul><li>Los vuelos se compran en billetes separados: un retraso nos puede dejar en tierra. Seguro con cobertura de conexiones.</li><li>7 plazas al precio más bajo puede que no queden: comprar pronto.</li><li>Ferry y buses de 2027 aún no publicados.</li></ul></div>
   </div>
 </div></section>`;v("presupuesto",b);m();

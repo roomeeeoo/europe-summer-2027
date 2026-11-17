@@ -1,4 +1,4 @@
-import{e as c,i as o,p as n,h as e,s as l,a as i,t as d,b as p,c as r,r as t,f as m,d as v,g as $,m as u,j as h}from"./trip-BaQuDotF.js";/* empty css              */const b=s=>`<span aria-label="${s} de 5">${"●".repeat(s)}<span style="opacity:.3">${"●".repeat(5-s)}</span></span>`,g=c.reduce((s,a)=>s+a.price,0),y=`
+import{e as c,i as o,p as n,h as e,s as l,a as i,t as d,b as p,c as r,r as t,f as m,d as v,g as $,m as u,j as h}from"./trip-Dz351KtT.js";/* empty css              */const b=s=>`<span aria-label="${s} de 5">${"●".repeat(s)}<span style="opacity:.3">${"●".repeat(5-s)}</span></span>`,g=c.reduce((s,a)=>s+a.price,0),y=`
 ${n("kakome","Página 5 · Aventuras","Aventuras","Todo desde Sarandë: calas a las que solo se llega en barco, un manantial azul eléctrico, ruinas de 2.500 años y dónde comer por 3 €.")}
 <nav class="chips-nav" aria-label="Secciones"><div class="wrap"><a href="#playas">Playas</a><a href="#excursiones">Excursiones</a><a href="#extras">Extras</a><a href="#comida">Comida</a></div></nav>
 

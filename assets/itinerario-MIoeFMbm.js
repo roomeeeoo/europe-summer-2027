@@ -1,5 +1,5 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./map-AxFWTrIY.js","./trip-BaQuDotF.js","./trip-C9erxWgE.css","./map-CIGW-MKW.css"])))=>i.map(i=>d[i]);
-import{p as l,z as i,i as e,h as n,m as p,j as c,_ as d,a as m,o as v}from"./trip-BaQuDotF.js";/* empty css              */import t from"./gsap-DRhTDw2I.js";import{ScrollTrigger as u}from"./ScrollTrigger-CcPJIpJ9.js";t.registerPlugin(u);const $=a=>`
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./map-oKz3Og5R.js","./trip-Dz351KtT.js","./trip-C9erxWgE.css","./map-CIGW-MKW.css"])))=>i.map(i=>d[i]);
+import{p as l,z as i,i as e,h as n,m as p,j as c,_ as d,a as m,o as v}from"./trip-Dz351KtT.js";/* empty css              */import t from"./gsap-DRhTDw2I.js";import{ScrollTrigger as u}from"./ScrollTrigger-CcPJIpJ9.js";t.registerPlugin(u);const $=a=>`
   <li><div class="tl-when"><b>${a.t}</b></div>
   <div class="tl-body"><h3>${a.what}</h3><p>${a.how}</p>
   <div class="tl-meta"><span>${e.clock}${a.dur}</span>${a.map?`<a class="link" href="${v(a.map)}" target="_blank" rel="noopener">${e.pin}Ver en el mapa</a>`:""}</div></div></li>`,y=a=>`
@@ -22,4 +22,4 @@ ${i.map(y).join("")}
   ${n("El mapa","Todo lo que vamos a ver.","Toca un punto para ver la foto, el precio y cómo llegar.")}
   <div class="map-filters" data-mapfilters></div>
   <div class="map-shell"><div id="map" role="region" aria-label="Mapa interactivo de la ruta"></div></div>
-</div></section>`;p("itinerario",g);c();matchMedia("(prefers-reduced-motion: reduce)").matches||document.querySelectorAll(".day-media img").forEach(a=>{t.fromTo(a,{scale:1.2,yPercent:-6},{scale:1,yPercent:6,ease:"none",scrollTrigger:{trigger:a.parentElement,start:"top bottom",end:"bottom top",scrub:!0}})});const o=document.getElementById("map");new IntersectionObserver((a,r)=>{a.some(s=>s.isIntersecting)&&(r.disconnect(),d(()=>import("./map-AxFWTrIY.js"),__vite__mapDeps([0,1,2,3]),import.meta.url).then(s=>s.initMap(o,document.querySelector("[data-mapfilters]"))))},{rootMargin:"500px"}).observe(o);
+</div></section>`;p("itinerario",g);c();matchMedia("(prefers-reduced-motion: reduce)").matches||document.querySelectorAll(".day-media img").forEach(a=>{t.fromTo(a,{scale:1.2,yPercent:-6},{scale:1,yPercent:6,ease:"none",scrollTrigger:{trigger:a.parentElement,start:"top bottom",end:"bottom top",scrub:!0}})});const o=document.getElementById("map");new IntersectionObserver((a,r)=>{a.some(s=>s.isIntersecting)&&(r.disconnect(),d(()=>import("./map-oKz3Og5R.js"),__vite__mapDeps([0,1,2,3]),import.meta.url).then(s=>s.initMap(o,document.querySelector("[data-mapfilters]"))))},{rootMargin:"500px"}).observe(o);
