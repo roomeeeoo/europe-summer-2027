@@ -6,14 +6,14 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const T = 'Europe Summer 2027';
 const pages = [
-  ['index.html', 'home', T, '8 días. 7 amigos. Tres países. Agua turquesa, barcos y fiesta en la Riviera albanesa, del 29 de junio al 6 de julio de 2027.', 'ksamil3'],
-  ['destino.html', 'destino', `El destino · ${T}`, 'Comparamos 12 destinos de Europa: por qué la Riviera albanesa es la mejor relación precio, playas, aventura y fiesta.', 'aerial'],
-  ['viaje.html', 'viaje', `Vuelos y casas · ${T}`, 'Vuelos desde Gran Canaria, ferry de Corfú y los alojamientos para los 7.', 'corfu'],
+  ['index.html', 'home', T, '7 amigos, una casa en Sarandë y el mar más azul de Europa. Del 29 de junio al 6 de julio de 2027.', 'ksamil3'],
+  ['destino.html', 'destino', `El destino · ${T}`, 'Comparamos 12 destinos de Europa: por qué Sarandë es la mejor relación calidad-precio.', 'aerial'],
+  ['viaje.html', 'viaje', `Vuelos y casa · ${T}`, 'Vuelos desde Gran Canaria, ferry de Corfú y la casa de Sarandë para los 7.', 'corfu'],
   ['itinerario.html', 'itinerario', `Itinerario · ${T}`, 'Los 8 días del viaje con horarios, precios y mapa.', 'butrint2'],
-  ['aventuras.html', 'aventuras', `Aventuras · ${T}`, 'Ksamil, Gjipe, el Ojo Azul, barco privado, Butrint y dónde comer barato.', 'gjipe'],
-  ['fiesta.html', 'fiesta', `Fiesta · ${T}`, 'Tres noches: Sarandë viernes y sábado y Blloku en Tirana.', 'sarandanight'],
+  ['aventuras.html', 'aventuras', `Aventuras · ${T}`, 'Ksamil, el Ojo Azul, barco privado, Butrint y dónde comer barato.', 'kakome'],
+  ['fiesta.html', 'fiesta', `Fiesta · ${T}`, 'Tres noches en el paseo marítimo de Sarandë.', 'sarandanight'],
   ['presupuesto.html', 'presupuesto', `Presupuesto · ${T}`, 'Lo que cuesta el viaje por persona y para el grupo de 7.', 'ksamil4'],
-  ['info.html', 'info', `Info útil · ${T}`, 'Documentación, dinero, seguridad y calendario de reservas.', 'himara'],
+  ['info.html', 'info', `Info útil · ${T}`, 'Documentación, dinero, seguridad y calendario de reservas.', 'sarandabeach'],
 ];
 
 for (const [file, js, title, desc, og] of pages) {

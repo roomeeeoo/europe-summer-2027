@@ -8,7 +8,7 @@ const dots = n => `<span aria-label="${n} de 5">${'●'.repeat(n)}<span style="o
 const optTotal = extras.reduce((a, e) => a + e.price, 0);
 
 const html = `
-${pageHero('gjipe', 'Página 5 · Aventuras', 'Aventuras', 'Calas a las que solo se llega en barco, un manantial azul eléctrico, ruinas de 2.500 años y dónde comer por 3 €.')}
+${pageHero('kakome', 'Página 5 · Aventuras', 'Aventuras', 'Todo desde Sarandë: calas a las que solo se llega en barco, un manantial azul eléctrico, ruinas de 2.500 años y dónde comer por 3 €.')}
 <nav class="chips-nav" aria-label="Secciones"><div class="wrap"><a href="#playas">Playas</a><a href="#excursiones">Excursiones</a><a href="#extras">Extras</a><a href="#comida">Comida</a></div></nav>
 
 <section class="sec" id="playas"><div class="wrap">
@@ -42,7 +42,7 @@ ${pageHero('gjipe', 'Página 5 · Aventuras', 'Aventuras', 'Calas a las que solo
 <section class="sec" id="extras"><div class="wrap">
   ${head('Extras', 'Si alguien quiere más.', 'No están en el presupuesto recomendado. Precio por persona.')}
   <div class="opts">${extras.map(e => `<div class="opt rv">${img(e.img, '', '72px')}<div><b>${e.name}</b><p>${e.worth}</p></div><span class="plus">+${e.price} €<small>${e.status === 'ok' ? 'comprobado' : 'estimado'}</small></span></div>`).join('')}</div>
-  <div class="note blue" style="margin-top:20px">${icon.info}<span>Hacerlos todos sumaría <b>+${eur(optTotal)}</b> por persona. El escenario "más cómodo" del presupuesto ya incluye Grama y la Cueva del Pirata.</span></div>
+  <div class="note blue" style="margin-top:20px">${icon.info}<span>Hacerlos todos sumaría <b>+${eur(optTotal)}</b> por persona. El escenario "más cómodo" del presupuesto ya incluye uno o dos de estos planes.</span></div>
 </div></section>
 
 <section class="sec stone" id="comida"><div class="wrap">

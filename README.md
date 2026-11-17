@@ -1,6 +1,6 @@
-# Europe Summer 2027 · Riviera albanesa
+# Europe Summer 2027 · Sarandë (Riviera albanesa)
 
-Web de presentación del viaje de 7 amigos a la Riviera albanesa (29 jun – 6 jul 2027): Gran Canaria → Bérgamo → Corfú ⛴ Sarandë → Himarë → Tirana → Bolonia → Gran Canaria. 8 páginas, hecha con Vite + GSAP + Leaflet.
+Web de presentación del viaje de 7 amigos a Sarandë, en la Riviera albanesa (29 jun – 6 jul 2027): una sola casa en Sarandë 5 noches, llegando y volviendo por Corfú (ferry) con escala en Bérgamo. 8 páginas, hecha con Vite + GSAP + Leaflet.
 
 Publicada en: https://roomeeeoo.github.io/europe-summer-2027/
 

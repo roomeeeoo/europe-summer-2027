@@ -38,7 +38,7 @@ export function initMap(el, filtersEl) {
     on ? layers[b.dataset.cat].addTo(map) : map.removeLayer(layers[b.dataset.cat]);
   });
 
-  // Encajar Corfú, la Riviera y Tirana
+  // Encajar Corfú, Sarandë y las excursiones
   map.fitBounds(L.latLngBounds(places.map(p => p.ll)).pad(0.08));
   setTimeout(() => map.invalidateSize(), 300);
   return map;

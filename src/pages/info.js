@@ -9,7 +9,7 @@ const tipIcon = { 'Documentación': icon.id, 'Dinero': icon.card, 'Seguridad': i
 const checks = [
   'Precio real de 7 plazas en cada vuelo de Ryanair',
   'Horarios del ferry Corfú–Sarandë 2027',
-  'Horario del bus Himarë–Tirana en verano 2027',
+  'Primer ferry Sarandë → Corfú el martes 6 de julio',
   'Días del pub crawl de Sarandë',
   'Camas reales de cada piso para 7 adultos',
   'Hotel en Corfú para el 30 de junio',
@@ -17,7 +17,7 @@ const checks = [
 ];
 
 const html = `
-${pageHero('himara', 'Página 8 · Info útil', 'Antes de salir', 'Papeles, dinero, seguridad, qué llevar y el calendario para reservar a tiempo.')}
+${pageHero('sarandabeach', 'Página 8 · Info útil', 'Antes de salir', 'Papeles, dinero, seguridad, qué llevar y el calendario para reservar a tiempo.')}
 <nav class="chips-nav" aria-label="Secciones"><div class="wrap"><a href="#claves">Claves</a><a href="#consejos">Consejos</a><a href="#calendario">Calendario</a><a href="#comprobar">Comprobar</a><a href="#enlaces">Enlaces</a></div></nav>
 
 <section class="sec" id="claves"><div class="wrap">

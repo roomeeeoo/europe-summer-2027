@@ -291,3 +291,4 @@ body.hdr-away .chips-nav { top: 0; }
 @media (max-width: 360px) { .route .stop span { display: none; } .kpi b { font-size: 1.3rem; } .kpi.main b { font-size: 2.6rem; } .facts3 b { font-size: .88rem; overflow-wrap: anywhere; } .leg .p { font-size: 1.1rem; } }
 .grid-2 > *, .grid-3 > *, .opt > div, .stack-legend > span { min-width: 0; }
 .opt p, .rows li span { overflow-wrap: anywhere; }
+.cal-day.way { background: repeating-linear-gradient(135deg, var(--lagoon-mist) 0 8px, #fff 8px 16px); }

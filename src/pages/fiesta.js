@@ -7,11 +7,11 @@ import { nightlife, partyCost } from '../data/trip.js';
 const nights = [
   ['Noche 1', 'Viernes 2 de julio', 'Sarandë', 'El día marcado. Venimos de Ksamil y Butrint: ducha, cena en el piso, pre-copas y al paseo. Si ese día hay pub crawl, es la forma más fácil de conocer gente de toda Europa.', true],
   ['Noche 2', 'Sábado 3 de julio', 'Sarandë', 'La noche con más ambiente de la semana. Terrazas primero (Lost Seaside, rooftops) y clubs después (Orange, Bluz) hasta las 4.', true],
-  ['Noche 3 · opcional', 'Lunes 5 de julio', 'Tirana', 'Blloku, el barrio de moda de la capital. Folie Terrace si hay evento. Volvemos a la 1: el vuelo sale a las 08:30.', false],
+  ['Noche 3', 'Lunes 5 de julio', 'Sarandë', 'La despedida: barco al atardecer y última vuelta por el paseo. Volvemos a la 1–2: el ferry a Corfú sale temprano.', false],
 ];
 
 const html = `
-${pageHero('sarandanight', 'Página 6 · Fiesta', 'De noche', 'Sarandë de viernes y sábado, y Tirana para despedirnos. Todos somos mayores de 18.')}
+${pageHero('sarandanight', 'Página 6 · Fiesta', 'De noche', 'Tres noches en el paseo de Sarandë, a cinco minutos andando de casa. Todos somos mayores de 18.')}
 <nav class="chips-nav" aria-label="Secciones"><div class="wrap"><a href="#noches">Las 3 noches</a><a href="#sitios">Sitios</a><a href="#coste">Cuánto cuesta</a><a href="#seguridad">Volver seguros</a></div></nav>
 
 <section class="sec" id="noches"><div class="wrap">
@@ -19,7 +19,7 @@ ${pageHero('sarandanight', 'Página 6 · Fiesta', 'De noche', 'Sarandë de viern
   <div class="photo-band rv">
     <figure>${img('sarandanight2', 'Sarandë de noche desde la playa', '(min-width:720px) 55vw, 58vw')}<figcaption>Sarandë de noche</figcaption></figure>
     <figure>${img('club', 'Ambiente de discoteca con láseres', '40vw')}<figcaption>Ilustrativa</figcaption></figure>
-    <figure>${img('tirana', 'Tirana de noche', '40vw')}<figcaption>Tirana</figcaption></figure>
+    <figure>${img('lekuresi', 'Sarandë al anochecer desde Lëkurësi', '40vw')}<figcaption>Antes de salir</figcaption></figure>
   </div>
   <div class="grid-3">${nights.map(([k, d, w, p, sure]) => `<div class="cmp ${sure ? 'on' : ''} rv"><span class="small">${k} · ${w}</span><h3 class="h3" style="margin-top:8px">${d}</h3><p class="small" style="margin:10px 0 0">${p}</p></div>`).join('')}</div>
 </div></section>
@@ -41,14 +41,14 @@ ${pageHero('sarandanight', 'Página 6 · Fiesta', 'De noche', 'Sarandë de viern
       <p><a class="link" href="${maps(v.name.split(' (')[0] + ' ' + v.area + ' Albania')}" target="_blank" rel="noopener">${icon.pin}Cómo llegar</a></p>
     </article>`).join('')}
   </div>
-  <div class="note" style="margin-top:20px">${icon.id}<span>Llevar siempre el DNI original. Ningún local de Sarandë publica su política de edad; algún bar de Tirana pide 20+ (sin confirmar). Siendo todos 18+, no debería haber problema.</span></div>
+  <div class="note" style="margin-top:20px">${icon.id}<span>Llevar siempre el DNI original. Ningún local de Sarandë publica su política de edad. Siendo todos 18+, no debería haber problema.</span></div>
 </div></section>
 
 <section class="sec" id="coste"><div class="wrap">
   ${head('Cuánto cuesta', 'Una noche, por persona.', 'Con pre-copas del súper y volviendo andando: el paseo está a 5–10 min del piso.')}
   <div class="grid-2">
     <div><ul class="rows">${partyCost.map(([a, b]) => `<li><span>${a}</span><b>${b}</b></li>`).join('')}</ul>
-      <ul class="rows"><li><span><b>Noche normal</b></span><b>15–25 €</b></li><li><span><b>Pub crawl + boat party</b></span><b>≈ 50 €</b></li><li><span><b>Blloku con evento</b></span><b>25–40 €</b></li></ul>
+      <ul class="rows"><li><span><b>Noche normal</b></span><b>15–25 €</b></li><li><span><b>Pub crawl + boat party</b></span><b>≈ 50 €</b></li><li><span><b>Barco al atardecer</b></span><b>20–30 €</b></li></ul>
       <p class="cap" style="color:#A9BFCD">${status('est')} En el presupuesto recomendado contamos 70 € para las tres noches.</p></div>
     <figure style="margin:0;border-radius:var(--r-l);overflow:hidden" class="rv">${img('lekuresi', 'Vistas de Sarandë desde el castillo de Lëkurësi', '(min-width:720px) 50vw, 100vw')}</figure>
   </div>

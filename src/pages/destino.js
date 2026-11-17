@@ -15,11 +15,11 @@ const why = [
   ['aerial', 'Paisaje', 'Agua turquesa, montañas que caen al mar, cañones, manantiales y calas sin carretera. Lo más parecido al Caribe en Europa.'],
   ['byrek', 'Precio', 'Cerveza a 2,40 € en bar, menú a 7–12 €, piso para 7 a 23 € por persona y noche. Lo más barato de toda la costa mediterránea.'],
   ['kakome', 'Aventura', 'Barco privado, snorkel, saltos, rutas a pie a playas escondidas, ruinas y el Ojo Azul. Una actividad distinta cada día.'],
-  ['sarandanight', 'Fiesta', 'Sarandë tiene más de 20 bares-club seguidos y abiertos hasta las 4, casi sin entrada. Y Tirana para la última noche.'],
+  ['sarandanight', 'Fiesta', 'Sarandë tiene más de 20 bares-club seguidos y abiertos hasta las 4, casi sin entrada, a cinco minutos andando de casa.'],
 ];
 
 const html = `
-${pageHero('aerial', 'Página 2 · El destino', 'Albania', 'Comparamos 12 destinos de Europa con vuelos desde Gran Canaria. Ganó la Riviera albanesa, y no por poco.')}
+${pageHero('aerial', 'Página 2 · El destino', 'Albania', 'Comparamos 12 destinos de Europa con vuelos desde Gran Canaria. Ganó Sarandë, en la Riviera albanesa: un solo sitio con todo cerca.')}
 <nav class="chips-nav" aria-label="Secciones"><div class="wrap"><a href="#por-que">Por qué</a><a href="#podio">El podio</a><a href="#comparativa">Comparativa</a><a href="#numeros">En números</a></div></nav>
 
 <section class="sec" id="por-que"><div class="wrap">
@@ -49,7 +49,7 @@ ${pageHero('aerial', 'Página 2 · El destino', 'Albania', 'Comparamos 12 destin
     <thead><tr><th scope="col">Destino</th><th scope="col">Vuelos i/v</th><th scope="col">Allí (semana)</th><th scope="col" class="hl">Total pp</th>${scoreLabels.map(l => `<th scope="col">${l}</th>`).join('')}</tr></thead>
     <tbody>${destinations.map(d => `<tr class="${d.rank === 1 ? 'win' : ''}"><td class="l"><b>${d.rank}. ${d.name}</b><br><span class="small muted">${d.where}</span></td><td>${d.flight}</td><td>${d.ground}</td><td class="hl"><b>${d.total}</b></td>${d.s.map(v => `<td>${dots(v)}</td>`).join('')}</tr>`).join('')}</tbody>
   </table></div>
-  <p class="cap">${status('ok')} Vuelos de Albania, Corfú, Algarve, Zante y Budapest leídos en Ryanair el 17 nov 2026 (una plaza). ${status('est')} El resto, estimaciones con precios de 2025–26 (Numbeo, Hostelworld, guías). Albania: 870 € es el presupuesto detallado del plan, con seguro, imprevistos y las noches en Bérgamo y Corfú.</p>
+  <p class="cap">${status('ok')} Vuelos de Albania, Corfú, Algarve, Zante y Budapest leídos en Ryanair el 17 nov 2026 (una plaza). ${status('est')} El resto, estimaciones con precios de 2025–26 (Numbeo, Hostelworld, guías). Sarandë: 986 € es el presupuesto detallado del plan, con seguro, imprevistos, dos ferris y las noches de paso en Bérgamo y Corfú.</p>
   <div class="grid-2" style="margin-top:30px">
     <div class="note blue">${icon.info}<span><b>¿Por qué no Sunny Beach, si es más barato?</b> Son unos 7 h de bus desde Sofía en cada sentido, dos días perdidos. La fiesta es enorme, pero el paisaje y la aventura no tienen comparación.</span></div>
     <div class="note blue">${icon.info}<span><b>¿Y el Algarve?</b> Es el plan B perfecto: más fácil y con más ambiente español, pero dormir allí en julio cuesta el doble y Benagil solo se ve con tour oficial.</span></div>

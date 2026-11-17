@@ -17,36 +17,36 @@ document.body.classList.add('home');
 
 // ---------------- Contenido ----------------
 const stops = [
-  { code: 'LPA', k: 'aerial', city: 'Gran Canaria', when: 'Mar 29 jun · 19:55', p: 'Despegamos los siete. Solo mochila.' },
-  { code: 'BGY', k: 'bergamo', city: 'Bérgamo', when: 'Mié 30 jun', p: 'Un día gratis en la ciudad alta antes de volar al sur.' },
+  { code: 'LPA', k: 'aerial', city: 'Gran Canaria', when: 'Mar 29 jun · 19:55', p: 'Despegamos los siete. Solo mochila. Escala de una noche en Bérgamo.' },
   { code: 'CFU', k: 'corfu', city: 'Corfú', when: 'Jue 1 jul', p: 'Desayuno en Grecia y ferry a Albania: 30 minutos de mar.' },
-  { code: 'SAR', k: 'saranda', city: 'Sarandë', when: '1 – 4 jul', p: 'Nuestra base: piso para los 7, paseo marítimo y fiesta.' },
+  { code: 'SAR', k: 'saranda', city: 'Sarandë', when: '1 – 6 jul · 5 noches', p: 'Nuestra casa toda la semana. Paseo marítimo, playa y fiesta a pie.' },
   { code: '2 JUL', k: 'ksamil2', city: 'Ksamil', when: 'Viernes 2 de julio', p: 'El día marcado: islas a nado, Butrint y primera noche grande.' },
-  { code: 'HIM', k: 'himara', city: 'Himarë', when: 'Dom 4 jul', p: 'Rumbo norte por la costa: calas sin carretera.' },
-  { code: 'TIA', k: 'tirana', city: 'Tirana', when: 'Lun 5 – mar 6 jul', p: 'Última noche en Blloku y vuelta por Bolonia.' },
+  { code: 'SÁB', k: 'kakome', city: 'Barco privado', when: 'Sábado 3', p: 'Calas sin carretera y snorkel. Por la noche, la noche fuerte.' },
+  { code: 'DOM', k: 'blueeye', city: 'Ojo Azul', when: 'Domingo 4', p: 'El manantial azul y Gjirokastër, la ciudad de piedra.' },
+  { code: 'LPA', k: 'lekuresi', city: 'Vuelta a casa', when: 'Mar 6 jul · 19:20', p: 'Ferry a Corfú y vuelo por Bérgamo. En casa para cenar.' },
 ];
 const destino = [
-  { tag: 'Ksamil', h: 'Agua de Caribe.', p: 'A 25 minutos en bus de nuestro piso. Las islas se cruzan nadando.' },
+  { tag: 'Ksamil', h: 'Agua de Caribe.', p: 'A 25 minutos en bus de nuestra casa. Las islas se cruzan nadando.' },
   { tag: 'Butrint', h: '2.500 años de historia.', p: 'Una ciudad griega y romana escondida en un bosque, por 10 €.' },
   { tag: 'Syri i Kaltër', h: 'El Ojo Azul.', p: 'Un manantial que brota de 50 metros de profundidad. Entrada: 50 céntimos.' },
-  { tag: 'Gjipe', h: 'Sin carretera.', p: 'Una playa al final de un cañón. Solo se llega andando o en barco.' },
-  { tag: 'Grama', h: 'Calas salvajes.', p: 'La costa que todavía no ha descubierto media Europa.' },
+  { tag: 'Kakome', h: 'Solo en barco.', p: 'Calas sin carretera a media hora del puerto de Sarandë.' },
+  { tag: 'Mirror Beach', h: 'Piedra blanca, agua clara.', p: 'Y todo a un bus de distancia. Sin cambiar de casa en toda la semana.' },
   { tag: 'Cada tarde', h: 'Y así acaba cada día.', p: 'Del 29 de junio al 6 de julio de 2027.' },
 ];
 const plan = [
-  { k: 'ksamil3', h: 'Playas', p: 'Ksamil, Gjipe, Kakome, Potam. Turquesa de verdad.', w: '6 playas' },
+  { k: 'ksamil3', h: 'Playas', p: 'Ksamil, Mirror Beach, Kakome. Turquesa de verdad.', w: '5 playas' },
   { k: 'kakome', h: 'Barco privado', p: 'Un barco solo para los 7, calas y snorkel.', w: '34–50 € cada uno' },
   { k: 'blueeye2', h: 'Ojo Azul', p: 'El manantial más famoso de los Balcanes.', w: '50 céntimos' },
   { k: 'butrint', h: 'Butrint', p: 'Ruinas Patrimonio de la Humanidad entre lago y mar.', w: '≈ 10 €' },
-  { k: 'corfu', h: 'Tres países', p: 'Italia, Grecia y Albania en un solo viaje.', w: 'De regalo' },
-  { k: 'byrek', h: 'Comida', p: 'Byrek a 1 €, gyros a 3 € y pescado a la brasa.', w: '≈ 18 € al día' },
-  { k: 'sarandanight', h: 'Fiesta', p: 'Viernes y sábado en Sarandë. Blloku en Tirana.', w: '3 noches' },
+  { k: 'saranda', h: 'Una sola casa', p: 'Cinco noches en el mismo piso. Sin maletas de un lado a otro.', w: '23 € por noche' },
+  { k: 'byrek', h: 'Comida', p: 'Byrek a 1 €, gyros a 3 € y pescado a la brasa.', w: '≈ 16 € al día' },
+  { k: 'sarandanight', h: 'Fiesta', p: 'Viernes, sábado y lunes en el paseo de Sarandë.', w: '3 noches' },
 ];
 const beaches = [
-  { k: 'ksamil1', h: 'Islas de Ksamil', where: 'Ksamil', p: 'Llegamos pronto, antes que los barcos, y cruzamos nadando a los islotes.', f: ['Gratis', 'Bus 200 lek', 'Viernes 2'] },
+  { k: 'ksamil1', h: 'Islas de Ksamil', where: 'Ksamil · 25 min en bus', p: 'Llegamos pronto, antes que los barcos, y cruzamos nadando a los islotes.', f: ['Gratis', 'Bus 200 lek', 'Viernes 2'] },
   { k: 'kakome', h: 'Kakome', where: 'Costa de Sarandë', p: 'Solo se llega en barco. Agua tan clara que el barco parece flotar.', f: ['Barco privado', 'Snorkel', 'Sábado 3'] },
-  { k: 'gjipe', h: 'Gjipe', where: 'Entre Himarë y Dhërmi', p: 'Una playa en la boca de un cañón. El último baño del viaje.', f: ['Taxi-barco 15–20 €', 'Sin carretera', 'Lunes 5'] },
-  { k: 'palermo', h: 'Porto Palermo', where: 'Himarë', p: 'Un castillo otomano sobre una bahía perfecta, y una base de submarinos de la Guerra Fría.', f: ['Gratis', 'Plan B', 'Lunes 5'] },
+  { k: 'ksamil5', h: 'Mirror Beach', where: 'Junto a Ksamil', p: 'Una cala de piedra blanca con menos gente. El último día de playa.', f: ['Gratis', 'Kayak ≈ 10 €', 'Lunes 5'] },
+  { k: 'lekuresi', h: 'Lëkurësi', where: 'Sobre Sarandë', p: 'El castillo desde el que se ve toda la bahía y Corfú al atardecer.', f: ['Gratis', '40 min a pie', 'Jueves 1'] },
 ];
 const scenes = [['portada', 'Portada'], ['ruta', 'La ruta'], ['destino', 'El destino'], ['plan', 'El plan'], ['playas', 'Playas'], ['noche', 'Fiesta'], ['coste', 'Lo que cuesta'], ['final', 'El final']];
 
@@ -58,9 +58,9 @@ const html = `
 <section class="s1" id="portada" data-dark aria-label="Portada">
   <div class="s1-media">${img('ksamil3', 'Agua turquesa en Ksamil', '100vw', false)}</div>
   <div class="s1-title">
-    <p class="s1-pre">7 amigos · Gran Canaria → Albania</p>
+    <p class="s1-pre">7 amigos · Gran Canaria → Sarandë</p>
     <h1 aria-label="Europe Summer 2027"><span class="l1">${'ALBANIA'.split('').map(c => `<span>${c}</span>`).join('')}</span><span class="l2">EUROPE SUMMER 2027</span></h1>
-    <p class="s1-sub">8 días. 3 países. El Caribe de Europa a precio de hace 15 años.</p>
+    <p class="s1-sub">Un solo sitio. El Caribe de Europa a precio de hace 15 años.</p>
   </div>
   <a class="s1-cue" href="#ruta" aria-label="Empezar">${icon.down}</a>
   <div class="s1-ticket" aria-label="Datos del viaje">
@@ -74,7 +74,7 @@ const html = `
 <section class="route" id="ruta" data-dark aria-label="La ruta">
   <div class="route-bg">${stops.map((s, i) => `<div class="route-ph ${i === 0 ? 'on' : ''}">${img(s.k, '', '100vw')}</div>`).join('')}</div>
   <div class="route-ui wrap">
-    <p class="kicker">La ruta · 7 paradas</p>
+    <p class="kicker">La semana · una sola casa</p>
     <div class="route-codes">${stops.map((s, i) => `<div class="route-stop ${i === 0 ? 'on' : ''}"><b>${s.code}</b><h3>${s.city}</h3><span>${s.when}</span><p>${s.p}</p></div>`).join('')}</div>
     <ol class="route-line" aria-hidden="true"><i data-routebar></i>${stops.map((s, i) => `<li class="${i === 0 ? 'on' : ''}"><span>${s.code === '2 JUL' ? 'KSA' : s.code}</span></li>`).join('')}</ol>
   </div>
@@ -82,7 +82,7 @@ const html = `
 
 <section class="s2" id="destino" data-dark aria-label="El destino">
   <div class="stage" data-stage></div>
-  <div class="s2-intro"><p class="kicker">La Riviera albanesa</p></div>
+  <div class="s2-intro"><p class="kicker">Sarandë y alrededores</p></div>
   <div class="s2-caps">${destino.map(d => `<div class="s2-cap"><small>${d.tag}</small><h3>${d.h}</h3><p>${d.p}</p></div>`).join('')}</div>
   <div class="s2-rail" aria-hidden="true">${destino.map(() => '<i><b></b></i>').join('')}</div>
 </section>
@@ -94,7 +94,7 @@ const html = `
 </section>
 
 <div id="playas">
-  <div class="s4-intro"><div class="wrap"><p class="kicker">Las playas</p><h2 class="h2">Donde nos<br>vamos a bañar.</h2><p class="lead">Cada una en su día, sin coche: bus, barco o a pie.</p></div></div>
+  <div class="s4-intro"><div class="wrap"><p class="kicker">Las playas</p><h2 class="h2">Donde nos<br>vamos a bañar.</h2><p class="lead">Todas a un bus, un barco o un paseo de casa.</p></div></div>
   ${beaches.map(b => `
   <section class="beach" data-dark aria-label="${b.h}">
     <div class="beach-img">${img(b.k, b.h, '100vw')}</div>
@@ -113,18 +113,18 @@ const html = `
       <div class="collage">
         <figure class="c1">${img('sarandanight', 'Paseo marítimo de Sarandë de noche', '60vw')}<figcaption>Sarandë de noche</figcaption></figure>
         <figure class="c2">${img('club', 'Ambiente de discoteca con láseres', '50vw')}<figcaption>Foto ilustrativa</figcaption></figure>
-        <figure class="c3">${img('tirana', 'Plaza Skanderbeg en Tirana de noche', '55vw')}<figcaption>Tirana</figcaption></figure>
+        <figure class="c3">${img('sarandanight2', 'Sarandë de noche desde la playa', '55vw')}<figcaption>El paseo</figcaption></figure>
       </div>
     </div>
     <div class="nights">
       <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 1 · viernes 2 jul</span><div class="day">El día clave</div><p>Venimos de Ksamil. Pre-copas en el piso y pub crawl por el paseo: la mejor forma de conocer gente.</p></div>
       <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 2 · sábado 3 jul</span><div class="day">La noche fuerte</div><p>El sábado es el día con más ambiente en Sarandë. Orange, Bluz, Lost Seaside y las terrazas.</p></div>
-      <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 3 · lunes 5 jul · opcional</span><div class="day">Blloku, Tirana</div><p>El barrio de moda de la capital. Sin pasarse: el vuelo sale a las 08:30.</p></div>
+      <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 3 · lunes 5 jul</span><div class="day">La despedida</div><p>Última noche en el paseo después del barco al atardecer. Sin pasarse: el ferry sale temprano.</p></div>
     </div>
     <div class="agechips" aria-label="Edad mínima">
       <span class="agechip"><b class="a18">18+</b>Todos somos mayores de edad</span>
       <span class="agechip"><b class="a18">0–10 €</b>Entrada habitual</span>
-      <span class="agechip"><b class="a21">20+</b>Algún local de Tirana (sin confirmar)</span>
+      <span class="agechip"><b class="a18">A pie</b>Todo a 5–10 min de casa</span>
     </div>
     <p style="margin-top:26px"><a class="btn" href="fiesta.html">Ver la página de fiesta ${icon.right}</a></p>
   </div>
@@ -134,7 +134,7 @@ const html = `
   <div class="wrap">
     <p class="kicker">Lo que nos va a costar</p>
     <p class="big-price"><span data-count="${TRIP.pp}">${TRIP.pp}</span><small> €</small></p>
-    <p class="cost-sub">Por persona y todo incluido: 4 vuelos, 7 noches de alojamiento, ferry, buses, comida, barco, excursiones, tres noches de fiesta, seguro e imprevistos. Solo con mochila.</p>
+    <p class="cost-sub">Por persona y todo incluido: 4 vuelos, 5 noches en Sarandë y 2 de paso, dos ferris, buses, comida, barco, excursiones, tres noches de fiesta, seguro e imprevistos. Solo con mochila.</p>
     <div class="split">
       <div class="split-row"><header><span>Se paga antes del viaje<br><span class="small muted">vuelos + alojamientos</span></span><b>${TRIP.before} €</b></header><div class="bar"><i style="width:${Math.round(TRIP.before / TRIP.pp * 100)}%;background:var(--sea)"></i></div></div>
       <div class="split-row"><header><span>Lo que llevamos para gastar allí<br><span class="small muted">comida, ferry, buses, barco, fiesta</span></span><b>${TRIP.during} €</b></header><div class="bar"><i style="width:${Math.round(TRIP.during / TRIP.pp * 100)}%;background:var(--lagoon)"></i></div></div>
@@ -150,11 +150,11 @@ const html = `
 </section>
 
 <section class="s7" id="final" data-dark aria-label="El final">
-  <div class="s7-img">${img('himarasunset', 'Atardecer en Himarë', '100vw')}</div>
+  <div class="s7-img">${img('himarasunset', 'Atardecer en la Riviera albanesa', '100vw')}</div>
   <div class="s7-txt">
     <p class="l">Siete amigos.</p>
     <p class="l">Un verano que no se repite.</p>
-    <p class="s">29 de junio – 6 de julio de 2027. Los vuelos ya están a la venta: solo falta decir que sí.</p>
+    <p class="s">29 de junio – 6 de julio de 2027. Una casa, siete amigos y el mar más azul de Europa. Los vuelos ya están a la venta: solo falta decir que sí.</p>
   </div>
 </section>
 <section class="go" data-dark aria-label="Explora el plan">

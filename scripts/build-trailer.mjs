@@ -19,9 +19,9 @@ export const SHOTS = [
   { key: "ksamil3", fx: 0.5, zoom: "in" },
   { key: "butrint2", fx: 0.5, zoom: "out" },
   { key: "blueeye", fx: 0.5, zoom: "in" },
-  { key: "gjipe", fx: 0.55, zoom: "in" },
-  { key: "grama", fx: 0.5, zoom: "out" },
-  { key: "himarasunset", fx: 0.6, zoom: "in" },
+  { key: "kakome", fx: 0.5, zoom: "in" },
+  { key: "ksamil5", fx: 0.45, zoom: "out" },
+  { key: "lekuresi", fx: 0.55, zoom: "in" },
 ];
 const FPS = 24, D = 3.4, F = 0.9;
 const frames = Math.round(D * FPS);
