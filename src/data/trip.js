@@ -45,10 +45,10 @@ export const flightLegs = [
 export const flightTotal = 278.01;
 
 export const flightOptions = [
-  { id: 'U', best: true, name: 'Base única: Corfú ida y vuelta', badge: 'Recomendado', route: 'LPA–BGY–CFU ⛴ Sarandë ⛴ CFU–BGY–LPA', price: '278,01 €', real: '≈ 340 €', status: 'ok',
+  { id: 'U', best: true, name: 'Base única: Corfú ida y vuelta', badge: 'Elegido · vuelta el martes', route: 'LPA–BGY–CFU ⛴ Sarandë ⛴ CFU–BGY–LPA', price: '278,01 €', real: '≈ 340 €', status: 'ok',
     out: 'Mar 29 jun 19:55 · noche en Bérgamo · mié 30 jun 20:50 a Corfú', back: 'Mar 6 jul: ferry temprano, Corfú 13:10 → Bérgamo 14:05 → 15:55 → Gran Canaria 19:20',
     pros: ['5 noches seguidas en Sarandë', 'Vuelta en el mismo día y por el mismo aeropuerto', 'Sin buses largos'], cons: ['El Bérgamo–Gran Canaria del martes es caro (134,99 €)', 'Billetes separados: 1 h 50 de margen en Bérgamo'] },
-  { id: 'U2', name: 'Vuelta por Bolonia', badge: 'Más barato', route: 'LPA–BGY–CFU · CFU–BLQ–LPA', price: '213,71 €', real: '≈ 265 €', status: 'ok',
+  { id: 'U2', name: 'Vuelta por Bolonia', badge: 'Descartado', route: 'LPA–BGY–CFU · CFU–BLQ–LPA', price: '213,71 €', real: '≈ 265 €', status: 'ok',
     out: 'Igual que el recomendado', back: 'Lun 5 jul Corfú 12:40 → Bolonia · noche · mar 6 jul 13:35 → Gran Canaria 17:05',
     pros: ['≈ 55 € menos por persona en total', 'Margen amplio: noche en Bolonia'], cons: ['Solo 4 noches en Sarandë', 'Un día menos de playa'] },
   { id: 'D', name: 'Ruta con varias paradas', badge: 'Descartado', route: 'LPA–BGY–CFU ⛴ … Tirana–BLQ–LPA', price: '189,71 €', real: '≈ 240 €', status: 'ok',
@@ -269,7 +269,6 @@ export const links = [
 ];
 export const pending = [
   'Que todos podemos el 29 jun – 6 jul',
-  'Vuelta el martes directa o el lunes por Bolonia (−55 €)',
   'Sol Levante House o la casa de Ksamil',
   'Rafting o día extra de playa el lunes',
 ];

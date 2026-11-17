@@ -66,9 +66,9 @@ ${pageHero('ksamil4', 'Página 7 · Presupuesto', 'Lo que cuesta', 'Todos los ga
 </div></section>
 
 <section class="sec" id="ahorro"><div class="wrap">
-  ${head('Ahorrar más', 'Cómo bajar de 850 €.', '')}
+  ${head('Ahorrar más', 'Cómo bajar de 900 €.', '')}
   <div class="grid-2">
-    <div class="tip rv"><h3>${icon.piggy}Trucos</h3><ul><li>Volver el lunes por Bolonia (una noche menos en Sarandë): −55 €</li><li>Comprar los vuelos ya, en grupos de 2–3: −40 €</li><li>Villa Luiza en Sarandë en vez de Sol Levante: −37 €</li><li>Barco compartido (18–40 €) en vez de privado: −15 €</li><li>Una noche de fiesta menos: −25 €</li><li><b>Resultado: ≈ 815 €</b></li></ul></div>
+    <div class="tip rv"><h3>${icon.piggy}Trucos</h3><ul><li>Comprar los vuelos ya, en grupos de 2–3: −40 €</li><li>Villa Luiza en Sarandë en vez de Sol Levante: −37 €</li><li>Barco compartido (18–40 €) en vez de privado: −15 €</li><li>Una noche de fiesta menos: −25 €</li><li><b>Resultado: ≈ 870 €</b></li></ul></div>
     <div class="tip rv"><h3>${icon.alert}Ojo</h3><ul><li>Los vuelos se compran en billetes separados: un retraso nos puede dejar en tierra. Seguro con cobertura de conexiones.</li><li>7 plazas al precio más bajo puede que no queden: comprar pronto.</li><li>Ferry y buses de 2027 aún no publicados.</li></ul></div>
   </div>
 </div></section>`;
