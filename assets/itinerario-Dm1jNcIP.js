@@ -1,5 +1,5 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./map-Ed58SNR-.js","./trip-DC3lKahQ.js","./trip-C9erxWgE.css","./map-CIGW-MKW.css"])))=>i.map(i=>d[i]);
-import{p as l,z as i,i as e,h as n,m as p,j as c,_ as d,a as m,o as v}from"./trip-DC3lKahQ.js";/* empty css              */import o from"./gsap-DRhTDw2I.js";import{ScrollTrigger as u}from"./ScrollTrigger-CcPJIpJ9.js";o.registerPlugin(u);const $=a=>`
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./map-AxFWTrIY.js","./trip-BaQuDotF.js","./trip-C9erxWgE.css","./map-CIGW-MKW.css"])))=>i.map(i=>d[i]);
+import{p as l,z as i,i as e,h as n,m as p,j as c,_ as d,a as m,o as v}from"./trip-BaQuDotF.js";/* empty css              */import t from"./gsap-DRhTDw2I.js";import{ScrollTrigger as u}from"./ScrollTrigger-CcPJIpJ9.js";t.registerPlugin(u);const $=a=>`
   <li><div class="tl-when"><b>${a.t}</b></div>
   <div class="tl-body"><h3>${a.what}</h3><p>${a.how}</p>
   <div class="tl-meta"><span>${e.clock}${a.dur}</span>${a.map?`<a class="link" href="${v(a.map)}" target="_blank" rel="noopener">${e.pin}Ver en el mapa</a>`:""}</div></div></li>`,y=a=>`
@@ -14,7 +14,7 @@ import{p as l,z as i,i as e,h as n,m as p,j as c,_ as d,a as m,o as v}from"./tri
       <div class="note blue planb">${e.umbrella}<span><b>Plan B:</b> ${a.planB}</span></div>
     </div>
   </section>`,g=`
-${l("butrint2","Página 4 · Itinerario","Día a día","Italia, Grecia y Albania en ocho días. Con el viernes 2 de julio entero en Ksamil y tres noches de fiesta.")}
+${l("butrint2","Página 4 · Itinerario","Día a día","Una semana con una sola casa en Sarandë: playa, barco, excursiones y tres noches de fiesta. El viernes 2 de julio, entero en Ksamil.")}
 <nav class="chips-nav" aria-label="Días"><div class="wrap">${i.map(a=>`<a href="#${a.id}">${a.date.replace(" jun","").replace(" jul","")}</a>`).join("")}<a href="#mapa">Mapa</a></div></nav>
 <div style="padding-top:40px"><div class="wrap"><p class="small muted">Coste por persona y día sin vuelos, alojamiento ni la compra del súper (eso está en el presupuesto). Horarios de vuelos comprobados; buses y ferris con horarios de 2026.</p></div></div>
 ${i.map(y).join("")}
@@ -22,4 +22,4 @@ ${i.map(y).join("")}
   ${n("El mapa","Todo lo que vamos a ver.","Toca un punto para ver la foto, el precio y cómo llegar.")}
   <div class="map-filters" data-mapfilters></div>
   <div class="map-shell"><div id="map" role="region" aria-label="Mapa interactivo de la ruta"></div></div>
-</div></section>`;p("itinerario",g);c();matchMedia("(prefers-reduced-motion: reduce)").matches||document.querySelectorAll(".day-media img").forEach(a=>{o.fromTo(a,{scale:1.2,yPercent:-6},{scale:1,yPercent:6,ease:"none",scrollTrigger:{trigger:a.parentElement,start:"top bottom",end:"bottom top",scrub:!0}})});const t=document.getElementById("map");new IntersectionObserver((a,r)=>{a.some(s=>s.isIntersecting)&&(r.disconnect(),d(()=>import("./map-Ed58SNR-.js"),__vite__mapDeps([0,1,2,3]),import.meta.url).then(s=>s.initMap(t,document.querySelector("[data-mapfilters]"))))},{rootMargin:"500px"}).observe(t);
+</div></section>`;p("itinerario",g);c();matchMedia("(prefers-reduced-motion: reduce)").matches||document.querySelectorAll(".day-media img").forEach(a=>{t.fromTo(a,{scale:1.2,yPercent:-6},{scale:1,yPercent:6,ease:"none",scrollTrigger:{trigger:a.parentElement,start:"top bottom",end:"bottom top",scrub:!0}})});const o=document.getElementById("map");new IntersectionObserver((a,r)=>{a.some(s=>s.isIntersecting)&&(r.disconnect(),d(()=>import("./map-AxFWTrIY.js"),__vite__mapDeps([0,1,2,3]),import.meta.url).then(s=>s.initMap(o,document.querySelector("[data-mapfilters]"))))},{rootMargin:"500px"}).observe(o);
