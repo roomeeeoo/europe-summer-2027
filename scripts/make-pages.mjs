@@ -6,14 +6,14 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const T = 'Europe Summer 2027';
 const pages = [
-  ['index.html', 'home', T, '7 amigos, una casa en Sarandë y el mar más azul de Europa. Del 29 de junio al 6 de julio de 2027.', 'ksamil3'],
-  ['destino.html', 'destino', `El destino · ${T}`, 'Comparamos 12 destinos de Europa: por qué Sarandë es la mejor relación calidad-precio.', 'aerial'],
-  ['viaje.html', 'viaje', `Vuelos y casa · ${T}`, 'Vuelos desde Gran Canaria, ferry de Corfú y la casa de Sarandë para los 7.', 'corfu'],
-  ['itinerario.html', 'itinerario', `Itinerario · ${T}`, 'Los 8 días del viaje con horarios, precios y mapa.', 'butrint2'],
-  ['aventuras.html', 'aventuras', `Aventuras · ${T}`, 'Ksamil, el Ojo Azul, barco privado, Butrint y dónde comer barato.', 'kakome'],
-  ['fiesta.html', 'fiesta', `Fiesta · ${T}`, 'Tres noches en el paseo marítimo de Sarandë.', 'sarandanight'],
-  ['presupuesto.html', 'presupuesto', `Presupuesto · ${T}`, 'Lo que cuesta el viaje por persona y para el grupo de 7.', 'ksamil4'],
-  ['info.html', 'info', `Info útil · ${T}`, 'Documentación, dinero, seguridad y calendario de reservas.', 'sarandabeach'],
+  ['index.html', 'home', T, '7 amigos, una semana de playa y fiesta en Rimini por menos de 650 €. Del 29 de junio al 6 de julio de 2027.', 'beach'],
+  ['destino.html', 'destino', `El destino · ${T}`, 'Lo más barato con playa y fiesta, en Italia y por menos de 650 €: por qué Rimini.', 'tiberio'],
+  ['viaje.html', 'viaje', `Vuelos y casa · ${T}`, 'Vuelo directo Gran Canaria–Bolonia y el piso de Rimini para los 7.', 'bologna'],
+  ['itinerario.html', 'itinerario', `Itinerario · ${T}`, 'Los 8 días del viaje con horarios, precios y mapa.', 'tiberio2'],
+  ['aventuras.html', 'aventuras', `Planes · ${T}`, 'Playa, Aquafan, San Marino, el centro romano y dónde comer barato.', 'aquafan'],
+  ['fiesta.html', 'fiesta', `Fiesta · ${T}`, 'Tres noches en la Riviera: Riccione, Coconuts y el lungomare.', 'beachnight'],
+  ['presupuesto.html', 'presupuesto', `Presupuesto · ${T}`, 'Lo que cuesta el viaje por persona y para el grupo de 7: máximo 650 €.', 'beach3'],
+  ['info.html', 'info', `Info útil · ${T}`, 'Documentación, dinero, seguridad y calendario de reservas.', 'lungomare'],
 ];
 
 for (const [file, js, title, desc, og] of pages) {

@@ -16,12 +16,11 @@ const ffmpeg = process.env.FFMPEG || 'ffmpeg';
 
 // key = foto en scripts/.cache · fx = foco horizontal (0–1) para el recorte vertical · zoom = 'in' | 'out'
 export const SHOTS = [
-  { key: "ksamil3", fx: 0.5, zoom: "in" },
-  { key: "butrint2", fx: 0.5, zoom: "out" },
-  { key: "blueeye", fx: 0.5, zoom: "in" },
-  { key: "kakome", fx: 0.5, zoom: "in" },
-  { key: "ksamil5", fx: 0.45, zoom: "out" },
-  { key: "lekuresi", fx: 0.55, zoom: "in" },
+  { key: "beach", fx: 0.5, zoom: "in" },
+  { key: "tiberio2", fx: 0.5, zoom: "out" },
+  { key: "riccionebeach", fx: 0.5, zoom: "in" },
+  { key: "sanmarino", fx: 0.55, zoom: "in" },
+  { key: "dusk", fx: 0.5, zoom: "out" },
 ];
 const FPS = 24, D = 3.4, F = 0.9;
 const frames = Math.round(D * FPS);

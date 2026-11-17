@@ -1,6 +1,6 @@
-# Europe Summer 2027 · Sarandë (Riviera albanesa)
+# Europe Summer 2027 · Rimini (Italia)
 
-Web de presentación del viaje de 7 amigos a Sarandë, en la Riviera albanesa (29 jun – 6 jul 2027): una sola casa en Sarandë 5 noches, llegando y volviendo por Corfú (ferry) con escala en Bérgamo. 8 páginas, hecha con Vite + GSAP + Leaflet.
+Web de presentación del viaje de 7 amigos a Rimini (29 jun – 6 jul 2027): vuelo directo Gran Canaria–Bolonia, un piso en Rimini 7 noches y máximo 650 € por persona. 8 páginas, hecha con Vite + GSAP + Leaflet.
 
 Publicada en: https://roomeeeoo.github.io/europe-summer-2027/
 

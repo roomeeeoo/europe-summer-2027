@@ -8,11 +8,11 @@ const dots = n => `<span aria-label="${n} de 5">${'●'.repeat(n)}<span style="o
 const optTotal = extras.reduce((a, e) => a + e.price, 0);
 
 const html = `
-${pageHero('kakome', 'Página 5 · Aventuras', 'Aventuras', 'Todo desde Sarandë: calas a las que solo se llega en barco, un manantial azul eléctrico, ruinas de 2.500 años y dónde comer por 3 €.')}
+${pageHero('aquafan', 'Página 5 · Planes', 'Planes', 'Todo desde Rimini: playa, Aquafan, San Marino, el centro romano y dónde comer bien por 5 €.')}
 <nav class="chips-nav" aria-label="Secciones"><div class="wrap"><a href="#playas">Playas</a><a href="#excursiones">Excursiones</a><a href="#extras">Extras</a><a href="#comida">Comida</a></div></nav>
 
 <section class="sec" id="playas"><div class="wrap">
-  ${head('Playas y calas', 'Dónde nos bañamos.', 'De imprescindible a "si sobra tiempo". Todas sin coche.')}
+  ${head('Playas', 'Dónde nos bañamos.', 'Arena fina y agua tranquila. Todas a pie, en bici o en Metromare.')}
   <div class="mosaic">
     ${spots.map((s, i) => `
     <article class="tile ${i === 0 ? 'big' : ''} rv">${img(s.img, s.name, i === 0 ? '100vw' : '(min-width:720px) 33vw, 50vw')}
@@ -23,7 +23,7 @@ ${pageHero('kakome', 'Página 5 · Aventuras', 'Aventuras', 'Todo desde Sarandë
 </div></section>
 
 <section class="sec tint" id="excursiones"><div class="wrap">
-  ${head('Excursiones', 'Lo que hace el viaje memorable.', 'Precios por persona. Todo en bus, barco o a pie.')}
+  ${head('Excursiones', 'Lo que hace el viaje memorable.', 'Precios por persona. Todo en bus, tren o a pie.')}
   <div class="grid-2">
     ${trips.map(t => `
     <article class="card rv">
@@ -46,7 +46,7 @@ ${pageHero('kakome', 'Página 5 · Aventuras', 'Aventuras', 'Todo desde Sarandë
 </div></section>
 
 <section class="sec stone" id="comida"><div class="wrap">
-  ${head('Comida', 'Comer bien por muy poco.', 'Desayuno y cena en el piso, street food a mediodía y un par de cenas de pescado.')}
+  ${head('Comida', 'Comer bien por muy poco.', 'Desayuno y cena en el piso, piadina o pizza al taglio a mediodía y algún aperitivo.')}
   <div class="restos">
     ${restaurants.map(r => `
     <article class="resto rv">${img(r.img, '', '88px')}

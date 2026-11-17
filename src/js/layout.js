@@ -5,14 +5,14 @@ import { icon, mark } from './icons.js';
 import { img } from './ui.js';
 
 export const PAGES = [
-  { id: 'inicio', href: './', title: 'Inicio', sub: 'La película del viaje', img: 'ksamil3' },
-  { id: 'destino', href: 'destino.html', title: 'El destino', sub: 'Por qué Sarandë gana a 11 destinos', img: 'aerial' },
-  { id: 'viaje', href: 'viaje.html', title: 'Vuelos y casa', sub: 'Cómo llegamos y dónde dormimos', img: 'corfu' },
-  { id: 'itinerario', href: 'itinerario.html', title: 'Itinerario', sub: 'Los 8 días, uno a uno', img: 'butrint2' },
-  { id: 'aventuras', href: 'aventuras.html', title: 'Aventuras', sub: 'Calas, barcos, Ojo Azul y comida', img: 'kakome' },
-  { id: 'fiesta', href: 'fiesta.html', title: 'Fiesta', sub: 'Tres noches y dónde salir', img: 'sarandanight' },
-  { id: 'presupuesto', href: 'presupuesto.html', title: 'Presupuesto', sub: 'Lo que cuesta, sin sorpresas', img: 'ksamil4' },
-  { id: 'info', href: 'info.html', title: 'Info útil', sub: 'Papeles, dinero y consejos', img: 'sarandabeach' },
+  { id: 'inicio', href: './', title: 'Inicio', sub: 'La película del viaje', img: 'beach' },
+  { id: 'destino', href: 'destino.html', title: 'El destino', sub: 'Por qué Rimini gana', img: 'tiberio' },
+  { id: 'viaje', href: 'viaje.html', title: 'Vuelos y casa', sub: 'Vuelo directo y el piso', img: 'bologna' },
+  { id: 'itinerario', href: 'itinerario.html', title: 'Itinerario', sub: 'Los 8 días, uno a uno', img: 'tiberio2' },
+  { id: 'aventuras', href: 'aventuras.html', title: 'Planes', sub: 'Playa, Aquafan, San Marino y comida', img: 'aquafan' },
+  { id: 'fiesta', href: 'fiesta.html', title: 'Fiesta', sub: 'Tres noches en la Riviera', img: 'beachnight' },
+  { id: 'presupuesto', href: 'presupuesto.html', title: 'Presupuesto', sub: 'Máximo 650 €', img: 'beach3' },
+  { id: 'info', href: 'info.html', title: 'Info útil', sub: 'Papeles, dinero y consejos', img: 'lungomare' },
 ];
 
 const header = current => `
@@ -30,7 +30,7 @@ const header = current => `
   <nav>
     ${PAGES.map((p, i) => `<a href="${p.href}" ${p.id === current ? 'aria-current="page"' : ''} style="transition-delay:${60 + i * 40}ms">${img(p.img, '', '96px')}<span><b>${p.title}</b><span>${p.sub}</span></span>${icon.right}</a>`).join('')}
   </nav>
-  <div class="menu-foot"><span>29 jun – 6 jul 2027 · Gran Canaria → Sarandë</span><span>Hecho por Romeo</span></div>
+  <div class="menu-foot"><span>29 jun – 6 jul 2027 · Gran Canaria → Rimini</span><span>Hecho por Romeo</span></div>
 </div>`;
 
 const nextBlock = current => {
@@ -43,7 +43,7 @@ const footer = () => `
 <footer class="foot"><div class="wrap">
   <div class="row"><nav aria-label="Páginas">${PAGES.map(p => `<a href="${p.href}">${p.title}</a>`).join('')}</nav></div>
   <div class="row" style="margin-top:18px;border-top:1px solid rgba(255,255,255,.1);padding-top:16px">
-    <span>Europe Summer 2027 · Sarandë, Riviera albanesa · 7 amigos · precios consultados el 17 nov 2026</span>
+    <span>Europe Summer 2027 · Rimini, Italia · 7 amigos · precios consultados el 17 nov 2026</span>
     <span class="by">Hecho por Romeo</span>
   </div>
 </div></footer>`;

@@ -27,9 +27,9 @@ const daySection = d => `
   </section>`;
 
 const html = `
-${pageHero('butrint2', 'Página 4 · Itinerario', 'Día a día', 'Una semana con una sola casa en Sarandë: playa, barco, excursiones y tres noches de fiesta. El viernes 2 de julio, entero en Ksamil.')}
+${pageHero('tiberio2', 'Página 4 · Itinerario', 'Día a día', 'Una semana con una sola casa en Rimini: playa, Aquafan, San Marino y tres noches de fiesta. El viernes 2 de julio, la noche grande.')}
 <nav class="chips-nav" aria-label="Días"><div class="wrap">${days.map(d => `<a href="#${d.id}">${d.date.replace(' jun', '').replace(' jul', '')}</a>`).join('')}<a href="#mapa">Mapa</a></div></nav>
-<div style="padding-top:40px"><div class="wrap"><p class="small muted">Coste por persona y día sin vuelos, alojamiento ni la compra del súper (eso está en el presupuesto). Horarios de vuelos comprobados; buses y ferris con horarios de 2026.</p></div></div>
+<div style="padding-top:40px"><div class="wrap"><p class="small muted">Coste por persona y día sin vuelos, alojamiento ni la compra del súper (eso está en el presupuesto). Horarios de vuelos comprobados; trenes y buses con horarios de 2026.</p></div></div>
 ${days.map(daySection).join('')}
 <section class="sec tint" id="mapa"><div class="wrap">
   ${head('El mapa', 'Todo lo que vamos a ver.', 'Toca un punto para ver la foto, el precio y cómo llegar.')}

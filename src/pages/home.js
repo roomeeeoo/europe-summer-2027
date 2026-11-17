@@ -17,38 +17,36 @@ document.body.classList.add('home');
 
 // ---------------- Contenido ----------------
 const stops = [
-  { code: 'LPA', k: 'aerial', city: 'Gran Canaria', when: 'Mar 29 jun · 19:55', p: 'Despegamos los siete. Solo mochila. Escala de una noche en Bérgamo.' },
-  { code: 'CFU', k: 'corfu', city: 'Corfú', when: 'Jue 1 jul', p: 'Desayuno en Grecia y ferry a Albania: 30 minutos de mar.' },
-  { code: 'SAR', k: 'saranda', city: 'Sarandë', when: '1 – 6 jul · 5 noches', p: 'Nuestra casa toda la semana. Paseo marítimo, playa y fiesta a pie.' },
-  { code: '2 JUL', k: 'ksamil2', city: 'Ksamil', when: 'Viernes 2 de julio', p: 'El día marcado: islas a nado, Butrint y primera noche grande.' },
-  { code: 'SÁB', k: 'kakome', city: 'Barco privado', when: 'Sábado 3', p: 'Calas sin carretera y snorkel. Por la noche, la noche fuerte.' },
-  { code: 'DOM', k: 'blueeye', city: 'Ojo Azul', when: 'Domingo 4', p: 'El manantial azul y Gjirokastër, la ciudad de piedra.' },
-  { code: 'LPA', k: 'lekuresi', city: 'Vuelta a casa', when: 'Mar 6 jul · 19:20', p: 'Ferry a Corfú y vuelo por Bérgamo. En casa para cenar.' },
+  { code: 'LPA', k: 'bologna', city: 'Gran Canaria → Bolonia', when: 'Mar 29 jun · 17:40', p: 'Vuelo directo. Solo mochila. Minibús a Rimini y a dormir.' },
+  { code: 'RIM', k: 'beach', city: 'Rimini', when: '29 jun – 6 jul · 7 noches', p: 'Un piso para los 7, a un paseo de la playa. No cambiamos de casa en toda la semana.' },
+  { code: 'JUE', k: 'aquafan', city: 'Aquafan', when: 'Jueves 1', p: 'Toboganes en Riccione y paseo por Viale Ceccarini.' },
+  { code: '2 JUL', k: 'beach2', city: 'El día grande', when: 'Viernes 2 de julio', p: 'Playa por el día y, por la noche, un club de verdad de la Riviera.' },
+  { code: 'SÁB', k: 'beachnight', city: 'Marina Centro', when: 'Sábado 3', p: 'Playa sin prisa y fiesta al lado de casa.' },
+  { code: 'DOM', k: 'sanmarino', city: 'San Marino', when: 'Domingo 4', p: 'Otro país en lo alto de un monte, a 50 minutos en bus.' },
+  { code: 'LPA', k: 'dusk', city: 'Vuelta a casa', when: 'Mar 6 jul · 17:05', p: 'Tren a Bolonia y vuelo directo. En casa por la tarde.' },
 ];
 const destino = [
-  { tag: 'Ksamil', h: 'Agua de Caribe.', p: 'A 25 minutos en bus de nuestra casa. Las islas se cruzan nadando.' },
-  { tag: 'Butrint', h: '2.500 años de historia.', p: 'Una ciudad griega y romana escondida en un bosque, por 10 €.' },
-  { tag: 'Syri i Kaltër', h: 'El Ojo Azul.', p: 'Un manantial que brota de 50 metros de profundidad. Entrada: 50 céntimos.' },
-  { tag: 'Kakome', h: 'Solo en barco.', p: 'Calas sin carretera a media hora del puerto de Sarandë.' },
-  { tag: 'Mirror Beach', h: 'Piedra blanca, agua clara.', p: 'Y todo a un bus de distancia. Sin cambiar de casa en toda la semana.' },
-  { tag: 'Cada tarde', h: 'Y así acaba cada día.', p: 'Del 29 de junio al 6 de julio de 2027.' },
+  { tag: 'Rimini', h: '15 km de arena.', p: 'Agua tranquila, playas libres gratis y el piso a un paseo.' },
+  { tag: 'Ponte di Tiberio', h: '2.000 años.', p: 'Un puente romano que se sigue usando, en el centro histórico.' },
+  { tag: 'Riccione', h: 'La Riviera de moda.', p: 'Aquafan, Viale Ceccarini y los clubs más famosos de Italia.' },
+  { tag: 'San Marino', h: 'Otro país.', p: 'Tres torres en lo alto del monte Titano, a 50 minutos en bus.' },
+  { tag: 'Cada tarde', h: 'Y así acaba cada día.', p: 'Del 29 de junio al 6 de julio de 2027. Por menos de 650 €.' },
 ];
 const plan = [
-  { k: 'ksamil3', h: 'Playas', p: 'Ksamil, Mirror Beach, Kakome. Turquesa de verdad.', w: '5 playas' },
-  { k: 'kakome', h: 'Barco privado', p: 'Un barco solo para los 7, calas y snorkel.', w: '34–50 € cada uno' },
-  { k: 'blueeye2', h: 'Ojo Azul', p: 'El manantial más famoso de los Balcanes.', w: '50 céntimos' },
-  { k: 'butrint', h: 'Butrint', p: 'Ruinas Patrimonio de la Humanidad entre lago y mar.', w: '≈ 10 €' },
-  { k: 'saranda', h: 'Una sola casa', p: 'Cinco noches en el mismo piso. Sin maletas de un lado a otro.', w: '23 € por noche' },
-  { k: 'byrek', h: 'Comida', p: 'Byrek a 1 €, gyros a 3 € y pescado a la brasa.', w: '≈ 16 € al día' },
-  { k: 'sarandanight', h: 'Fiesta', p: 'Viernes, sábado y lunes en el paseo de Sarandë.', w: '3 noches' },
+  { k: 'beach3', h: 'Playa', p: 'Arena fina y agua tranquila. Las libres son gratis.', w: '7 días' },
+  { k: 'aquafan2', h: 'Aquafan', p: 'El parque acuático más famoso de Italia.', w: '≈ 30 €' },
+  { k: 'sanmarino2', h: 'San Marino', p: 'Un país medieval en lo alto de un monte.', w: 'Bus ≈ 6 €' },
+  { k: 'tiberio2', h: 'Centro histórico', p: 'Puente de Tiberio, Arco de Augusto y aperitivo.', w: 'Gratis' },
+  { k: 'riccione', h: 'Riccione', p: 'Viale Ceccarini y la playa de moda.', w: 'Metromare 2 €' },
+  { k: 'piadina', h: 'Comida', p: 'Piadina, pizza al taglio y gelato.', w: '≈ 12,50 € al día' },
+  { k: 'club', h: 'Fiesta', p: 'Un club grande el viernes y Marina Centro el sábado.', w: '3 noches' },
 ];
 const beaches = [
-  { k: 'ksamil1', h: 'Islas de Ksamil', where: 'Ksamil · 25 min en bus', p: 'Llegamos pronto, antes que los barcos, y cruzamos nadando a los islotes.', f: ['Gratis', 'Bus 200 lek', 'Viernes 2'] },
-  { k: 'kakome', h: 'Kakome', where: 'Costa de Sarandë', p: 'Solo se llega en barco. Agua tan clara que el barco parece flotar.', f: ['Barco privado', 'Snorkel', 'Sábado 3'] },
-  { k: 'ksamil5', h: 'Mirror Beach', where: 'Junto a Ksamil', p: 'Una cala de piedra blanca con menos gente. El último día de playa.', f: ['Gratis', 'Kayak ≈ 10 €', 'Lunes 5'] },
-  { k: 'lekuresi', h: 'Lëkurësi', where: 'Sobre Sarandë', p: 'El castillo desde el que se ve toda la bahía y Corfú al atardecer.', f: ['Gratis', '40 min a pie', 'Jueves 1'] },
+  { k: 'beach', h: 'Marina Centro', where: 'Rimini · a un paseo del piso', p: 'Nuestra playa de cada día: arena fina y agua que no cubre en muchos metros.', f: ['Gratis en tramos libres', 'Set 18–30 €', 'Toda la semana'] },
+  { k: 'riccionebeach', h: 'Riccione', where: 'A 20 min en Metromare', p: 'La playa de moda de la Riviera, junto a Viale Ceccarini.', f: ['Metromare ≈ 2 €', 'Jueves 1'] },
+  { k: 'sanmarino', h: 'San Marino', where: 'A 50 min en bus', p: 'No es playa, pero las vistas a toda la costa desde la Guaita valen el viaje.', f: ['Bus ≈ 5–6 €', 'Domingo 4'] },
 ];
-const scenes = [['portada', 'Portada'], ['ruta', 'La ruta'], ['destino', 'El destino'], ['plan', 'El plan'], ['playas', 'Playas'], ['noche', 'Fiesta'], ['coste', 'Lo que cuesta'], ['final', 'El final']];
+const scenes = [['portada', 'Portada'], ['ruta', 'La semana'], ['destino', 'El destino'], ['plan', 'El plan'], ['playas', 'Playas'], ['noche', 'Fiesta'], ['coste', 'Lo que cuesta'], ['final', 'El final']];
 
 const html = `
 <div class="nightbg" aria-hidden="true"></div>
@@ -56,33 +54,33 @@ const html = `
 <div class="scene-label" aria-hidden="true"><span data-scene-name>Portada</span><i>${scenes.map(() => '<b></b>').join('')}</i></div>
 
 <section class="s1" id="portada" data-dark aria-label="Portada">
-  <div class="s1-media">${img('ksamil3', 'Agua turquesa en Ksamil', '100vw', false)}</div>
+  <div class="s1-media">${img('beach', 'Playa de Rimini con sombrillas', '100vw', false)}</div>
   <div class="s1-title">
-    <p class="s1-pre">7 amigos · Gran Canaria → Sarandë</p>
-    <h1 aria-label="Europe Summer 2027"><span class="l1">${'ALBANIA'.split('').map(c => `<span>${c}</span>`).join('')}</span><span class="l2">EUROPE SUMMER 2027</span></h1>
-    <p class="s1-sub">Un solo sitio. El Caribe de Europa a precio de hace 15 años.</p>
+    <p class="s1-pre">7 amigos · Gran Canaria → Rimini, Italia</p>
+    <h1 aria-label="Rimini, Europe Summer 2027"><span class="l1">${'RIMINI'.split('').map(c => `<span>${c}</span>`).join('')}</span><span class="l2">EUROPE SUMMER 2027</span></h1>
+    <p class="s1-sub">Una semana de playa y fiesta en Italia por menos de 650 €.</p>
   </div>
   <a class="s1-cue" href="#ruta" aria-label="Empezar">${icon.down}</a>
   <div class="s1-ticket" aria-label="Datos del viaje">
     <div><span>Cuándo</span><b>29 jun – 6 jul</b></div>
-    <div><span>Ruta</span><b>LPA → CFU ⛴ SAR</b></div>
+    <div><span>Vuelo</span><b>LPA ⇄ Bolonia</b></div>
     <div><span>Quiénes</span><b>7 amigos</b></div>
     <div><span>Por persona</span><b>≈ ${TRIP.pp} €</b></div>
   </div>
 </section>
 
-<section class="route" id="ruta" data-dark aria-label="La ruta">
+<section class="route" id="ruta" data-dark aria-label="La semana">
   <div class="route-bg">${stops.map((s, i) => `<div class="route-ph ${i === 0 ? 'on' : ''}">${img(s.k, '', '100vw')}</div>`).join('')}</div>
   <div class="route-ui wrap">
     <p class="kicker">La semana · una sola casa</p>
     <div class="route-codes">${stops.map((s, i) => `<div class="route-stop ${i === 0 ? 'on' : ''}"><b>${s.code}</b><h3>${s.city}</h3><span>${s.when}</span><p>${s.p}</p></div>`).join('')}</div>
-    <ol class="route-line" aria-hidden="true"><i data-routebar></i>${stops.map((s, i) => `<li class="${i === 0 ? 'on' : ''}"><span>${s.code === '2 JUL' ? 'KSA' : s.code}</span></li>`).join('')}</ol>
+    <ol class="route-line" aria-hidden="true"><i data-routebar></i>${stops.map((s, i) => `<li class="${i === 0 ? 'on' : ''}"><span>${s.code === '2 JUL' ? 'VIE' : s.code}</span></li>`).join('')}</ol>
   </div>
 </section>
 
 <section class="s2" id="destino" data-dark aria-label="El destino">
   <div class="stage" data-stage></div>
-  <div class="s2-intro"><p class="kicker">Sarandë y alrededores</p></div>
+  <div class="s2-intro"><p class="kicker">Rimini y la Riviera</p></div>
   <div class="s2-caps">${destino.map(d => `<div class="s2-cap"><small>${d.tag}</small><h3>${d.h}</h3><p>${d.p}</p></div>`).join('')}</div>
   <div class="s2-rail" aria-hidden="true">${destino.map(() => '<i><b></b></i>').join('')}</div>
 </section>
@@ -94,7 +92,7 @@ const html = `
 </section>
 
 <div id="playas">
-  <div class="s4-intro"><div class="wrap"><p class="kicker">Las playas</p><h2 class="h2">Donde nos<br>vamos a bañar.</h2><p class="lead">Todas a un bus, un barco o un paseo de casa.</p></div></div>
+  <div class="s4-intro"><div class="wrap"><p class="kicker">Las playas</p><h2 class="h2">Donde nos<br>vamos a bañar.</h2><p class="lead">A un paseo, un Metromare o un bus de casa.</p></div></div>
   ${beaches.map(b => `
   <section class="beach" data-dark aria-label="${b.h}">
     <div class="beach-img">${img(b.k, b.h, '100vw')}</div>
@@ -107,24 +105,24 @@ const html = `
     <div class="grid-l">
       <div>
         <p class="kicker">La fiesta</p>
-        <h2 class="s5-title">Y de noche,<span>Sarandë.</span></h2>
-        <p class="lead" style="color:#C9D8E2">Más de veinte bares-club seguidos en el paseo marítimo, abiertos hasta las cuatro. Casi todos sin entrada, la cerveza a 2–3 € y gente de toda Europa.</p>
+        <h2 class="s5-title">Y de noche,<span>la Riviera.</span></h2>
+        <p class="lead" style="color:#C9D8E2">La zona de discotecas más famosa de Italia: Cocoricò y Peter Pan en Riccione, Coconuts en Rimini y el lungomare lleno de bares. Miles de jóvenes italianos de vacaciones.</p>
       </div>
       <div class="collage">
-        <figure class="c1">${img('sarandanight', 'Paseo marítimo de Sarandë de noche', '60vw')}<figcaption>Sarandë de noche</figcaption></figure>
+        <figure class="c1">${img('beachnight', 'Sombrillas de Rimini de noche', '60vw')}<figcaption>Rimini de noche</figcaption></figure>
         <figure class="c2">${img('club', 'Ambiente de discoteca con láseres', '50vw')}<figcaption>Foto ilustrativa</figcaption></figure>
-        <figure class="c3">${img('sarandanight2', 'Sarandë de noche desde la playa', '55vw')}<figcaption>El paseo</figcaption></figure>
+        <figure class="c3">${img('grandhotel', 'Grand Hotel de Rimini iluminado', '55vw')}<figcaption>Grand Hotel</figcaption></figure>
       </div>
     </div>
     <div class="nights">
-      <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 1 · viernes 2 jul</span><div class="day">El día clave</div><p>Venimos de Ksamil. Pre-copas en el piso y pub crawl por el paseo: la mejor forma de conocer gente.</p></div>
-      <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 2 · sábado 3 jul</span><div class="day">La noche fuerte</div><p>El sábado es el día con más ambiente en Sarandë. Orange, Bluz, Lost Seaside y las terrazas.</p></div>
-      <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 3 · lunes 5 jul</span><div class="day">La despedida</div><p>Última noche en el paseo después del barco al atardecer. Sin pasarse: el ferry sale temprano.</p></div>
+      <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 1 · viernes 2 jul</span><div class="day">El club grande</div><p>Cocoricò o Peter Pan en Riccione, según el evento de ese viernes. Pre-copas en el piso para ahorrar.</p></div>
+      <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 2 · sábado 3 jul</span><div class="day">Marina Centro</div><p>Coconuts y los bares del lungomare, a un paseo del piso y casi sin entrada.</p></div>
+      <div class="nightcard rv"><span class="small" style="color:#FF8FA3">Noche 3 · lunes 5 jul</span><div class="day">La despedida</div><p>Atardecer en el puerto y bares del lungomare. Sin pasarse: el tren sale por la mañana.</p></div>
     </div>
-    <div class="agechips" aria-label="Edad mínima">
+    <div class="agechips" aria-label="Datos de la fiesta">
       <span class="agechip"><b class="a18">18+</b>Todos somos mayores de edad</span>
-      <span class="agechip"><b class="a18">0–10 €</b>Entrada habitual</span>
-      <span class="agechip"><b class="a18">A pie</b>Todo a 5–10 min de casa</span>
+      <span class="agechip"><b class="a18">0–40 €</b>Entrada según el sitio</span>
+      <span class="agechip"><b class="a18">60 €</b>Las 3 noches en el presupuesto</span>
     </div>
     <p style="margin-top:26px"><a class="btn" href="fiesta.html">Ver la página de fiesta ${icon.right}</a></p>
   </div>
@@ -132,29 +130,29 @@ const html = `
 
 <section class="s6" id="coste" aria-label="Lo que cuesta">
   <div class="wrap">
-    <p class="kicker">Lo que nos va a costar</p>
+    <p class="kicker">Lo que nos va a costar · máximo 650 €</p>
     <p class="big-price"><span data-count="${TRIP.pp}">${TRIP.pp}</span><small> €</small></p>
-    <p class="cost-sub">Por persona y todo incluido: 4 vuelos, 5 noches en Sarandë y 2 de paso, dos ferris, buses, comida, barco, excursiones, tres noches de fiesta, seguro e imprevistos. Solo con mochila.</p>
+    <p class="cost-sub">Por persona y todo incluido: vuelo directo, 7 noches de piso, minibús y trenes, comida, playa, Aquafan, San Marino, tres noches de fiesta, seguro e imprevistos. Solo con mochila.</p>
     <div class="split">
-      <div class="split-row"><header><span>Se paga antes del viaje<br><span class="small muted">vuelos + alojamientos</span></span><b>${TRIP.before} €</b></header><div class="bar"><i style="width:${Math.round(TRIP.before / TRIP.pp * 100)}%;background:var(--sea)"></i></div></div>
-      <div class="split-row"><header><span>Lo que llevamos para gastar allí<br><span class="small muted">comida, ferry, buses, barco, fiesta</span></span><b>${TRIP.during} €</b></header><div class="bar"><i style="width:${Math.round(TRIP.during / TRIP.pp * 100)}%;background:var(--lagoon)"></i></div></div>
+      <div class="split-row"><header><span>Se paga antes del viaje<br><span class="small muted">vuelos + piso</span></span><b>${TRIP.before} €</b></header><div class="bar"><i style="width:${Math.round(TRIP.before / TRIP.pp * 100)}%;background:var(--sea)"></i></div></div>
+      <div class="split-row"><header><span>Lo que llevamos para gastar allí<br><span class="small muted">comida, transporte, planes, fiesta</span></span><b>${TRIP.during} €</b></header><div class="bar"><i style="width:${Math.round(TRIP.during / TRIP.pp * 100)}%;background:var(--lagoon)"></i></div></div>
     </div>
     <div class="vs">
       <div><span>Ahorrando al máximo</span><b>≈ ${TRIP.min} €</b></div>
       <div class="on"><span>Recomendado</span><b>≈ ${TRIP.pp} €</b></div>
       <div><span>Más cómodo</span><b>≈ ${fmt(TRIP.max)} €</b></div>
     </div>
-    <p class="small muted" style="margin-top:18px">Grupo de 7: ≈ ${fmt(TRIP.group)} €. Vuelos comprobados en Ryanair y alojamientos en Airbnb para nuestras fechas el 17 nov 2026; el resto son estimaciones con precios de 2025–26.</p>
+    <p class="small muted" style="margin-top:18px">Grupo de 7: ≈ ${fmt(TRIP.group)} €. Vuelos comprobados en Ryanair y piso en Airbnb para nuestras fechas el 17 nov 2026; el resto son estimaciones con precios de 2025–26. El recomendado cabe en 650 € con poco margen: hay que comprar los vuelos pronto.</p>
     <p style="margin-top:22px"><a class="btn" href="presupuesto.html">Ver todos los números ${icon.right}</a></p>
   </div>
 </section>
 
 <section class="s7" id="final" data-dark aria-label="El final">
-  <div class="s7-img">${img('himarasunset', 'Atardecer en la Riviera albanesa', '100vw')}</div>
+  <div class="s7-img">${img('dusk', 'La costa de Rimini al atardecer', '100vw')}</div>
   <div class="s7-txt">
     <p class="l">Siete amigos.</p>
-    <p class="l">Un verano que no se repite.</p>
-    <p class="s">29 de junio – 6 de julio de 2027. Una casa, siete amigos y el mar más azul de Europa. Los vuelos ya están a la venta: solo falta decir que sí.</p>
+    <p class="l">Una semana en Italia.</p>
+    <p class="s">29 de junio – 6 de julio de 2027. Un vuelo directo, una casa y la Riviera entera por delante. Los vuelos ya están a la venta: solo falta decir que sí.</p>
   </div>
 </section>
 <section class="go" data-dark aria-label="Explora el plan">

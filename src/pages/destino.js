@@ -9,30 +9,30 @@ import { destinations, scoreLabels } from '../data/trip.js';
 gsap.registerPlugin(ScrollTrigger);
 const dots = n => `<span class="dots" aria-label="${n} de 5">${'●'.repeat(n)}<span style="opacity:.25">${'●'.repeat(5 - n)}</span></span>`;
 const podium = destinations.slice(0, 3);
-const photos = { alb: 'ksamil3', alg: 'riviera', cfu: 'corfu' };
+const photos = { rim: 'beach', opo: 'porto', jes: 'beach3' };
 
 const why = [
-  ['aerial', 'Paisaje', 'Agua turquesa, montañas que caen al mar, cañones, manantiales y calas sin carretera. Lo más parecido al Caribe en Europa.'],
-  ['byrek', 'Precio', 'Cerveza a 2,40 € en bar, menú a 7–12 €, piso para 7 a 23 € por persona y noche. Lo más barato de toda la costa mediterránea.'],
-  ['kakome', 'Aventura', 'Barco privado, snorkel, saltos, rutas a pie a playas escondidas, ruinas y el Ojo Azul. Una actividad distinta cada día.'],
-  ['sarandanight', 'Fiesta', 'Sarandë tiene más de 20 bares-club seguidos y abiertos hasta las 4, casi sin entrada, a cinco minutos andando de casa.'],
+  ['bologna', 'Vuelo directo', 'Gran Canaria–Bolonia sin escalas por 145,68 € ida y vuelta. Rimini está a una hora.'],
+  ['beach', 'Playa', '15 km de arena fina, agua tranquila y tramos de playa libre gratis a un paseo del piso.'],
+  ['club', 'Fiesta', 'La Riviera Romagnola es la zona de discotecas más famosa de Italia: Cocoricò, Peter Pan, Coconuts.'],
+  ['piadina', 'Precio', 'Piso para 7 a 21 € por persona y noche, piadina a 5 € y todo en bus o andando. Cabe en 650 €.'],
 ];
 
 const html = `
-${pageHero('aerial', 'Página 2 · El destino', 'Albania', 'Comparamos 12 destinos de Europa con vuelos desde Gran Canaria. Ganó Sarandë, en la Riviera albanesa: un solo sitio con todo cerca.')}
+${pageHero('tiberio', 'Página 2 · El destino', 'Rimini', 'Buscamos lo más barato de Europa con playa y fiesta, a ser posible en Italia, y con un máximo de 650 € por persona. Ganó Rimini.')}
 <nav class="chips-nav" aria-label="Secciones"><div class="wrap"><a href="#por-que">Por qué</a><a href="#podio">El podio</a><a href="#comparativa">Comparativa</a><a href="#numeros">En números</a></div></nav>
 
 <section class="sec" id="por-que"><div class="wrap">
-  ${head('Por qué Albania', 'Lo tiene todo, y cuesta poco.', 'Buscábamos playas increíbles, aventura, fiesta y gente joven gastando lo mínimo. Es el único sitio que saca nota alta en todo a la vez.')}
+  ${head('Por qué Rimini', 'Italia, playa y fiesta, por poco.', 'Es el único destino de Italia con vuelo directo desde Gran Canaria que cabe en 650 € con todo incluido.')}
   <div class="why-grid">${why.map(([k, t, p], i) => `<article class="why rv" style="--d:${i * 80}ms">${img(k, '', '(min-width:900px) 25vw, 100vw')}<div><span>0${i + 1}</span><h3>${t}</h3><p>${p}</p></div></article>`).join('')}</div>
 </div></section>
 
 <section class="sec tint" id="podio"><div class="wrap">
-  ${head('El podio', 'Las tres mejores opciones.', 'El total incluye vuelos, alojamiento, comida, transporte, actividades y fiesta durante una semana.')}
+  ${head('El podio', 'Las tres mejores opciones.', 'Total por persona con vuelos, alojamiento, comida, transporte, actividades y fiesta.')}
   <div class="podium">
     ${podium.map(d => `
     <article class="card ${d.rank === 1 ? 'rec' : ''} rv">
-      <div class="card-img">${img(photos[d.id], d.name, '(min-width:1040px) 33vw, 100vw')}<span class="badge">${d.rank}º · ${d.verdict}</span></div>
+      ${d.rank === 1 ? `<div class="card-img">${img(photos[d.id], d.name, '(min-width:1040px) 33vw, 100vw')}<span class="badge">${d.rank}º · ${d.verdict}</span></div>` : `<div class="card-body" style="padding-bottom:0"><span class="st st-sec">${d.rank}º · ${d.verdict}</span></div>`}
       <div class="card-body">
         <div><h3 class="h4" style="font-size:1.35rem">${d.name}</h3><p class="small muted" style="margin:4px 0 0">${d.where}</p></div>
         <div class="facts3"><div><span>Vuelos</span><b>${d.flight}</b></div><div><span>Allí</span><b>${d.ground}</b></div><div><span>Total pp</span><b>${d.total}</b></div></div>
@@ -44,26 +44,26 @@ ${pageHero('aerial', 'Página 2 · El destino', 'Albania', 'Comparamos 12 destin
 </div></section>
 
 <section class="sec" id="comparativa"><div class="wrap">
-  ${head('Comparativa', 'Los 12 destinos.', 'Puntuación de 1 a 5. Desliza la tabla en el móvil.')}
+  ${head('Comparativa', 'Los 8 destinos.', 'Puntuación de 1 a 5. Desliza la tabla en el móvil.')}
   <div class="tbl-wrap rv"><table class="tbl cmp-tbl" style="min-width:1020px">
     <thead><tr><th scope="col">Destino</th><th scope="col">Vuelos i/v</th><th scope="col">Allí (semana)</th><th scope="col" class="hl">Total pp</th>${scoreLabels.map(l => `<th scope="col">${l}</th>`).join('')}</tr></thead>
     <tbody>${destinations.map(d => `<tr class="${d.rank === 1 ? 'win' : ''}"><td class="l"><b>${d.rank}. ${d.name}</b><br><span class="small muted">${d.where}</span></td><td>${d.flight}</td><td>${d.ground}</td><td class="hl"><b>${d.total}</b></td>${d.s.map(v => `<td>${dots(v)}</td>`).join('')}</tr>`).join('')}</tbody>
   </table></div>
-  <p class="cap">${status('ok')} Vuelos de Albania, Corfú, Algarve, Zante y Budapest leídos en Ryanair el 17 nov 2026 (una plaza). ${status('est')} El resto, estimaciones con precios de 2025–26 (Numbeo, Hostelworld, guías). Sarandë: 986 € es el presupuesto detallado del plan, con seguro, imprevistos, dos ferris y las noches de paso en Bérgamo y Corfú.</p>
+  <p class="cap">${status('ok')} Vuelos leídos en Ryanair el 17 nov 2026 (una plaza). ${status('est')} El resto, estimaciones con precios de 2025–26. Rimini: 644 € es el presupuesto detallado del plan.</p>
   <div class="grid-2" style="margin-top:30px">
-    <div class="note blue">${icon.info}<span><b>¿Por qué no Sunny Beach, si es más barato?</b> Son unos 7 h de bus desde Sofía en cada sentido, dos días perdidos. La fiesta es enorme, pero el paisaje y la aventura no tienen comparación.</span></div>
-    <div class="note blue">${icon.info}<span><b>¿Y el Algarve?</b> Es el plan B perfecto: más fácil y con más ambiente español, pero dormir allí en julio cuesta el doble y Benagil solo se ve con tour oficial.</span></div>
+    <div class="note blue">${icon.info}<span><b>¿Y Oporto?</b> Es el plan B: también cabe en 650 € y el vuelo es el más barato, pero no es Italia y el Atlántico está frío (17–19 °C).</span></div>
+    <div class="note blue">${icon.info}<span><b>¿Por qué no Roma o el Lago de Garda?</b> Roma: la vuelta cuesta 260,99 € y no hay playa sin coche. Garda: solo dormir ya cuesta 250–350 € por persona.</span></div>
   </div>
 </div></section>
 
 <section class="sec stone" id="numeros"><div class="wrap">
-  ${head('En números', 'Albania frente a casa.', 'Precios medios de Numbeo (nov 2026) y de guías de 2025–26.')}
+  ${head('En números', 'Rimini, por persona.', '')}
   <div class="kpis">
-    <div class="kpi main rv"><span>Cerveza en un bar</span><b>2,40 €</b><span>Croacia 3,50 € · España ≈ 3 €</span></div>
-    <div class="kpi rv"><span>Menú barato</span><b>8,80 €</b></div>
-    <div class="kpi rv"><span>Byrek</span><b>≈ 1 €</b></div>
-    <div class="kpi rv"><span>Piso para 7, por noche</span><b>23 € pp</b></div>
-    <div class="kpi rv"><span>Entrada a Butrint</span><b>10 €</b></div>
+    <div class="kpi main rv"><span>Total recomendado</span><b>644 €</b><span>máximo 650 €</span></div>
+    <div class="kpi rv"><span>Vuelo directo i/v</span><b>146 €</b></div>
+    <div class="kpi rv"><span>Piso, por noche</span><b>21 €</b></div>
+    <div class="kpi rv"><span>Piadina</span><b>4–7 €</b></div>
+    <div class="kpi rv"><span>Tren a Bolonia</span><b>≈ 10 €</b></div>
   </div>
 </div></section>`;
 

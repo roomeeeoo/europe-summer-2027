@@ -8,16 +8,16 @@ import credits from '../data/credits.json';
 const tipIcon = { 'Documentación': icon.id, 'Dinero': icon.card, 'Seguridad': icon.shield, 'Salud': icon.sun, 'Equipaje': icon.bag, 'Ahorro': icon.piggy };
 const checks = [
   'Precio real de 7 plazas en cada vuelo de Ryanair',
-  'Horarios del ferry Corfú–Sarandë 2027',
-  'Primer ferry Sarandë → Corfú el martes 6 de julio',
-  'Días del pub crawl de Sarandë',
+  'Horario de trenes Rimini–Bolonia del 6 de julio de 2027',
+  'Presupuesto real del minibús desde el aeropuerto de Bolonia',
+  'Eventos de Cocoricò y Peter Pan para el viernes 2 de julio',
   'Camas reales de cada piso para 7 adultos',
-  'Hotel en Corfú para el 30 de junio',
+  'Que el piso acepta grupos de jóvenes y llegada a medianoche',
   'Seguro con cobertura de conexiones perdidas',
 ];
 
 const html = `
-${pageHero('sarandabeach', 'Página 8 · Info útil', 'Antes de salir', 'Papeles, dinero, seguridad, qué llevar y el calendario para reservar a tiempo.')}
+${pageHero('lungomare', 'Página 8 · Info útil', 'Antes de salir', 'Papeles, dinero, seguridad, qué llevar y el calendario para reservar a tiempo.')}
 <nav class="chips-nav" aria-label="Secciones"><div class="wrap"><a href="#claves">Claves</a><a href="#consejos">Consejos</a><a href="#calendario">Calendario</a><a href="#comprobar">Comprobar</a><a href="#enlaces">Enlaces</a></div></nav>
 
 <section class="sec" id="claves"><div class="wrap">
