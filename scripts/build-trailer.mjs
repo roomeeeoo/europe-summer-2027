@@ -16,7 +16,7 @@ const ffmpeg = process.env.FFMPEG || 'ffmpeg';
 
 // key = foto en scripts/.cache · fx = foco horizontal (0–1) para el recorte vertical · zoom = 'in' | 'out'
 export const SHOTS = [
-  { key: "ksamil1", fx: 0.62, zoom: "in" },
+  { key: "ksamil3", fx: 0.5, zoom: "in" },
   { key: "butrint2", fx: 0.5, zoom: "out" },
   { key: "blueeye", fx: 0.5, zoom: "in" },
   { key: "gjipe", fx: 0.55, zoom: "in" },

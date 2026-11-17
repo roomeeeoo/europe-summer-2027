@@ -105,7 +105,7 @@ body.home main { background: transparent; }
 
 /* ---------- ESCENA 6 · Lo que cuesta ---------- */
 .s6 { background: var(--paper); padding: 120px 0; }
-.big-price { font-stretch: 125%; font-weight: 900; letter-spacing: -.045em; line-height: .85; font-size: clamp(6rem, 34vw, 19rem); margin: 0; font-variant-numeric: tabular-nums; }
+.big-price { font-stretch: 125%; font-weight: 900; letter-spacing: -.045em; line-height: .85; font-size: clamp(5rem, 30vw, 19rem); margin: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .big-price small { font-size: .3em; letter-spacing: -.02em; }
 .cost-sub { font-size: clamp(1.05rem, 4vw, 1.35rem); color: var(--ink-2); max-width: 40ch; margin: 14px 0 0; }
 .split { display: grid; gap: 14px; margin-top: 46px; }

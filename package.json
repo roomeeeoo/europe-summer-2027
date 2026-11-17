@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "images": "node scripts/fetch-images.mjs",
-    "deploy": "npm run build && gh-pages -d dist -b main --dotfiles -r https://github.com/roomeeeoo/europe-summer-2027.git"
+    "deploy": "npm run build && gh-pages -d dist -b main --dotfiles -u \"roomeeeoo <roomeeeoo@users.noreply.github.com>\" -r https://github.com/roomeeeoo/europe-summer-2027.git"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
